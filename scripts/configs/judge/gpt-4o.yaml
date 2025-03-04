@@ -1,0 +1,17 @@
+model_name: gpt-4o
+model_type: openai_api_models
+base_model_name: gpt-4o
+
+# No use for gpt models
+model_max_length: 131072
+
+# only used for making savefile directory
+model_name_summary: gpt-4o/gpt-4o
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: gpt-4o
+
+# used for saving files
+save_file_name: gpt-4o
+
+finetuned_tokenizer: False

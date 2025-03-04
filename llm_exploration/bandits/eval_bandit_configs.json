@@ -1,0 +1,9 @@
+[
+    {
+        "name": "color_selection_problem",
+        "system_prompt": "You are in a room with 3 buttons labeled black, violet, indigo. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 50 time steps and, on each time step, you can choose any button and receive the reward. Your goal is to maximize the total reward over the 50 time steps. At each time step, I will tell you the reward from the previous round, Then you must make the next choice, which must be exactly one of black, violet, indigo. You must provide your final answer as <Answer>COLOR</Answer> where COLOR is one of black, violet, indigo. This is the first timestep. Which button will you choose next? YOU MUST provide your final answer as <Answer>COLOR</Answer>",
+        "arms": ["black", "violet", "indigo"],
+        "num_turns": 50,
+        "answer": "<Answer>COLOR</Answer>"
+    }
+]

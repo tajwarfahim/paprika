@@ -1,0 +1,12 @@
+model_name: mistralai/Mistral-7B-Instruct-v0.2
+model_type: huggingface_models
+base_model_name: mistralai/Mistral-7B-Instruct-v0.2
+
+# Context length, should not handle longer contexts correctly
+model_max_length: 2048
+
+# only used for making savefile directory
+model_name_summary: Mistral-7B-Instruct-v0.2/Mistral-7B-Instruct-v0.2
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: mistralai/Mistral-7B-Instruct-v0.2

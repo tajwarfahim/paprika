@@ -1,0 +1,18 @@
+model_name: cellular_automata
+model_type: cellular_automata_inference_engine
+mode: env
+base_model_name: null
+
+# No use for gpt models
+model_max_length: 131072
+
+# only used for making savefile directory
+model_name_summary: null
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: null
+
+# used for saving files
+save_file_name: null
+
+finetuned_tokenizer: null

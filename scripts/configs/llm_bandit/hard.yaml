@@ -1,0 +1,6 @@
+arms_list: ["blue", "red", "green", "violet", "purple"]
+probability_list: [0.4, 0.4, 0.6, 0.4, 0.4]
+T: 50
+mode: original
+reward_history_type: original
+name: hard

@@ -1,0 +1,15 @@
+defaults:
+  - _self_
+  - game_env: ???
+  - judge: ???
+
+seed: 69
+
+judge_temperature: 1.0
+judge_top_p: 1.0
+judge_max_n_tokens: 512
+
+# Dirs
+repo_dir: ???
+save_dir: ??? 
+save_file: ${save_dir}/llm_exploration/curriculum/curriculum_configs/twenty_questions_difficulty_${game_env.data_type}.json

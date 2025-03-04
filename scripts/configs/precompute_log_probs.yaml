@@ -1,0 +1,22 @@
+defaults:
+  - _self_
+  - inference_engine: ???
+
+data_dir: ???
+
+rejected_sampling: all
+seed: 69
+num_samples: null
+
+num_turn_threshold_for_dpo: 4
+judge_label_strategy: count_invalids_as_failures
+token_length_threshold: 2500
+
+# Dirs
+repo_dir: ???
+save_dir: ${data_dir}
+save_file: ${save_dir}/${inference_engine.base_model_name}.pt
+
+# Please update the following path according to your local machine's setup
+save_trajectories_file: /home/ftajwar/training_datasets/first_round_all_games_dpo_compiled_dataset/first_round_all_games_dpo_compiled.json
+should_save_trajectories_to_json: False

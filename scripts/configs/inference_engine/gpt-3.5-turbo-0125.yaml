@@ -1,0 +1,12 @@
+model_name: gpt-3.5-turbo-0125
+model_type: openai_api_models
+base_model_name: gpt-3.5-turbo-0125
+
+# No use for gpt models
+model_max_length: 131072
+
+# only used for making savefile directory
+model_name_summary: gpt-3.5-turbo-0125/gpt-3.5-turbo-0125
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: gpt-3.5-turbo-0125

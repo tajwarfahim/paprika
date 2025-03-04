@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - inference_engine: ???
+  - llm_bandit: ???
+  - temperature_scheduler: ???
+
+seed: 69
+num_trials: 10
+randomly_set_arm_probabilities: False
+max_new_tokens: 512
+top_p: 1.0
+finetuned_tokenizer: False
+temperature_threshold: 0.2
+min_p_choice: 0.3
+
+# Dirs
+repo_dir: ???
+save_dir: ???
+save_file: ${save_dir}/llm_evaluation_trajectories_${inference_engine.model_name_summary}_${llm_bandit.name}_mode_${llm_bandit.mode}_reward_history_type_${llm_bandit.reward_history_type}_${temperature_scheduler.name}.json

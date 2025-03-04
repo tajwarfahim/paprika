@@ -1,0 +1,12 @@
+model_name: meta-llama/Meta-Llama-3.1-8B-Instruct
+model_type: huggingface_models
+base_model_name: meta-llama/Meta-Llama-3.1-8B-Instruct
+
+# Context length, should not handle longer contexts correctly
+model_max_length: 8192
+
+# only used for making savefile directory
+model_name_summary: Meta-Llama-3.1-8B-Instruct/Meta-Llama-3.1-8B-Instruct
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: meta-llama/Meta-Llama-3.1-8B-Instruct

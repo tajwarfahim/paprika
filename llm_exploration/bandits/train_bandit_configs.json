@@ -1,0 +1,569 @@
+[
+    {
+        "name": "mystery_treasure_hunt",
+        "system_prompt": "You are an adventurer exploring an ancient temple with three hidden treasure chests labeled gold, silver, and bronze. Each chest is associated with a different distribution of rewards, but the exact reward rates are unknown. You have 15 chances to open a chest and collect a reward. Each time you open a chest, you will receive a reward sampled from that chest's distribution. Your goal is to maximize the total treasure collected over 15 attempts. After each choice, I will tell you the treasure value obtained from the previous chest. You must decide which chest to open next, and provide your final answer as <Answer>CHEST</Answer> where CHEST is one of gold, silver, bronze. This is the first attempt. Which chest will you open next?",
+        "arms": ["gold", "silver", "bronze"],
+        "num_turns": 15,
+        "answer": "<Answer>CHEST</Answer>"
+    },
+    {
+        "name": "online_learning_path_customization",
+        "system_prompt": "You are an online education platform administrator choosing between five learning paths for new students: Data Science, Web Development, Digital Marketing, Graphic Design, and Cybersecurity. Each path has an unknown completion rate. You have 50 students to assign to these paths. Each time you assign a path, the completion result will be sampled from that path's distribution. Your goal is to maximize the total number of completions over the 50 students. After each student assignment, I will tell you the completion result from the last path. Which learning path will you assign next? Provide your final answer as <Answer>PATH</Answer> where PATH is one of Data Science, Web Development, Digital Marketing, Graphic Design, Cybersecurity. This is the first student. Which path will you choose?",
+        "arms": ["Data Science", "Web Development", "Digital Marketing", "Graphic Design", "Cybersecurity"],
+        "num_turns": 50,
+        "answer": "<Answer>PATH</Answer>"
+    },
+    {
+        "name": "energy_production_optimization",
+        "system_prompt": "Imagine you are an energy sector manager choosing between four types of energy production: solar, wind, nuclear, and hydroelectric. Each type has an unknown efficiency rate in producing energy. You have 30 days to allocate resources among these types. Each day, you choose one type of energy production, and the energy output will be sampled from the type’s distribution. Your goal is to maximize total energy output over the 30 days. After each day, I will inform you of the output from the last energy type. Which energy production type will you choose next? Provide your final answer as <Answer>ENERGY</Answer> where ENERGY is one of solar, wind, nuclear, hydroelectric. This is the first day. Which type will you choose?",
+        "arms": ["solar", "wind", "nuclear", "hydroelectric"],
+        "num_turns": 30,
+        "answer": "<Answer>ENERGY</Answer>"
+    },
+    {
+        "name": "space_research_missions",
+        "system_prompt": "Recently you got a new job assisting a scientist leading space research missions to seven different celestial bodies: Mars, Venus, Europa, Titan, Ganymede, an exoplanet, and a black hole observation. Each mission has an unknown potential for scientific discovery. You have 35 missions to conduct. Each time you choose a mission target, the scientific data collected will be sampled from that target's distribution. Your goal is to maximize the total scientific data collected over the 35 missions. After each mission, I will inform you of the data collected from the last target. Which mission target will you choose next? Provide your final answer as <Answer>TARGET</Answer> where TARGET is one of Mars, Venus, Europa, Titan, Ganymede, exoplanet, black hole observation. This is the first mission. Which target will you choose?",
+        "arms": ["Mars", "Venus", "Europa", "Titan", "Ganymede", "exoplanet", "black hole observation"],
+        "num_turns": 35,
+        "answer": "<Answer>TARGET</Answer>"
+    },
+    {
+        "name": "healthcare_policy_testing",
+        "system_prompt": "You are a healthcare policymaker deciding between six different policies: universal healthcare, telemedicine expansion, vaccination campaigns, mental health support, elderly care improvements, and fitness initiatives. Each policy has an unknown effect on public health improvement. You have 25 trials to implement these policies. Each trial, you choose one policy, and the public health improvement will be sampled from the policy’s distribution. Your goal is to maximize the total public health improvement over the 25 trials. After each trial, I will inform you of the improvement from the last policy. Which policy will you implement next? Provide your final answer as <Answer>POLICY</Answer> where POLICY is one of universal healthcare, telemedicine expansion, vaccination campaigns, mental health support, elderly care improvements, fitness initiatives. This is the first trial. Which policy will you choose?",
+        "arms": ["universal healthcare", "telemedicine expansion", "vaccination campaigns", "mental health support", "elderly care improvements", "fitness initiatives"],
+        "num_turns": 25,
+        "answer": "<Answer>POLICY</Answer>"
+    },
+    {
+        "name": "urban_infrastructure_development",
+        "system_prompt": "You are a city planner deciding between five types of urban infrastructure projects: road repair, public transit expansion, green spaces, water management, and waste management. Each project has an unknown impact on city livability. You have 20 rounds to invest in these projects. Each time you choose a project, the improvement in city livability will be sampled from the project’s distribution. Your goal is to maximize the total livability improvement over the 20 rounds. After each round, I will inform you of the improvement from the last project. Which project will you invest in next? Provide your final answer as <Answer>PROJECT</Answer> where PROJECT is one of road repair, public transit expansion, green spaces, water management, waste management. This is the first round. Which project will you choose?",
+        "arms": ["road repair", "public transit expansion", "green spaces", "water management", "waste management"],
+        "num_turns": 20,
+        "answer": "<Answer>PROJECT</Answer>"
+    },
+    {
+        "name": "investment_porfolio_allocation",
+        "system_prompt": "You are a financial advisor choosing between four different investment options for a client's portfolio: stocks, bonds, real estate, and cryptocurrency. Each option has an unknown return rate. You have 30 opportunities to allocate the client's funds among these options. Each time you choose an investment option, the return will be sampled from that option's distribution. Your goal is to maximize the total return on investment over the 30 allocations. After each allocation, I will inform you of the return from the last investment. Which option will you allocate funds to next? Provide your final answer as <Answer>INVESTMENT</Answer> where INVESTMENT is one of stocks, bonds, real estate, cryptocurrency. This is the first allocation. Which option will you choose?",
+        "arms": ["stocks", "bonds", "real estate", "cryptocurrency"],
+        "num_turns": 30,
+        "answer": "<Answer>INVESTMENT</Answer>"
+    },
+    {
+        "name": "animal_conservation_effort",
+        "system_prompt": "You are a wildlife conservationist deciding between seven different conservation efforts: anti-poaching patrols, habitat restoration, captive breeding, community outreach, wildlife corridors, reforestation, and waterhole maintenance. Each effort has an unknown success rate in increasing the wildlife population. You have 35 efforts to apply. Each time you choose an effort, the increase in wildlife population will be sampled from the effort's distribution. Your goal is to maximize the total wildlife population increase over the 35 efforts. After each effort, I will inform you of the population increase from the last effort. Which conservation effort will you choose next? Provide your final answer as <Answer>EFFORT</Answer> where EFFORT is one of anti-poaching patrols, habitat restoration, captive breeding, community outreach, wildlife corridors, reforestation, waterhole maintenance. This is the first effort. Which effort will you choose?",
+        "arms": ["anti-poaching patrols", "habitat restoration", "captive breeding", "community outreach", "wildlife corridors", "reforestation", "waterhole maintenance"],
+        "num_turns": 35,
+        "answer": "<Answer>EFFORT</Answer>"
+    },
+    {
+        "name": "retail_store_seasonal_promotions",
+        "system_prompt": "You are a retail manager planning seasonal promotions for four different categories: winter clothing, summer accessories, back-to-school supplies, and holiday decorations. Each category has an unknown effect on increasing sales during the promotion period. You have 20 opportunities to run these promotions throughout the year. Each time you run a promotion, the sales increase will be sampled from that category's distribution. Your goal is to maximize total sales increase over the 20 opportunities. After each promotion, I will tell you the sales increase from the last promotion. Which category will you promote next? Provide your final answer as <Answer>CATEGORY</Answer> where CATEGORY is one of winter clothing, summer accessories, back-to-school supplies, holiday decorations. This is the first promotion. Which category will you choose?",
+        "arms": ["winter clothing", "summer accessories", "back-to-school supplies", "holiday decorations"],
+        "num_turns": 20,
+        "answer": "<Answer>CATEGORY</Answer>"
+    },
+    {
+        "name": "sports_team_lineup_optimization",
+        "system_prompt": "You are a coach deciding between five different lineup strategies for your sports team: offensive, defensive, balanced, rotational, and aggressive. Each strategy has an unknown success rate for winning games. You have 30 games in the season to test these strategies. Each game, you choose one lineup strategy, and the game outcome will be sampled from the strategy's success rate distribution. Your goal is to maximize the total number of wins over the 30 games. After each game, I will inform you of the outcome from the last strategy. Which lineup strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of offensive, defensive, balanced, rotational, aggressive. This is the first game. Which strategy will you choose?",
+        "arms": ["offensive", "defensive", "balanced", "rotational", "aggressive"],
+        "num_turns": 30,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "city_transportation_planning",
+        "system_prompt": "You are a city transportation planner deciding between six different transportation projects: metro expansion, bike lanes, bus rapid transit, electric vehicle incentives, pedestrian walkways, and carpool programs. Each project has an unknown effect on reducing city congestion. You have 30 trials to implement these projects. Each trial, you choose one project, and the reduction in congestion will be sampled from the project's distribution. Your goal is to maximize the total reduction in city congestion over the 30 trials. After each trial, I will inform you of the reduction from the last project. Which project will you implement next? Provide your final answer as <Answer>PROJECT</Answer> where PROJECT is one of metro expansion, bike lanes, bus rapid transit, electric vehicle incentives, pedestrian walkways, carpool programs. This is the first trial. Which project will you choose?",
+        "arms": ["metro expansion", "bike lanes", "bus rapid transit", "electric vehicle incentives", "pedestrian walkways", "carpool programs"],
+        "num_turns": 30,
+        "answer": "<Answer>PROJECT</Answer>"
+    },
+    {
+        "name": "amusement_park_ride_development",
+        "system_prompt": "You are an amusement park manager deciding between five new rides to develop: roller coaster, ferris wheel, haunted house, water slide, and virtual reality experience. Each ride has an unknown attraction rate among visitors. You have 25 rounds to decide which rides to develop. Each round, you choose one ride to develop, and the visitor attraction will be sampled from the ride's distribution. Your goal is to maximize total visitor attraction over the 25 rounds. After each round, I will inform you of the attraction from the last ride. Which ride will you develop next? Provide your final answer as <Answer>RIDE</Answer> where RIDE is one of roller coaster, ferris wheel, haunted house, water slide, virtual reality experience. This is the first round. Which ride will you choose?",
+        "arms": ["roller coaster", "ferris wheel", "haunted house", "water slide", "virtual reality experience"],
+        "num_turns": 25,
+        "answer": "<Answer>RIDE</Answer>"
+    },
+    {
+        "name": "fast_food_menu_innovation",
+        "system_prompt": "You are a fast food chain manager testing four new menu items: gourmet burger, plant-based wrap, smoothie bowl, and spicy chicken wings. Each item has an unknown popularity rate among customers. You have 20 days to feature these items on the menu. Each day, you choose one item to promote, and the sales will be sampled from that item's distribution. Your goal is to maximize total sales over the 20 days. After each day, I will inform you of the sales from the last item promoted. Which item will you feature next? Provide your final answer as <Answer>ITEM</Answer> where ITEM is one of gourmet burger, plant-based wrap, smoothie bowl, spicy chicken wings. This is the first day. Which item will you choose?",
+        "arms": ["gourmet burger", "plant-based wrap", "smoothie bowl", "spicy chicken wings"],
+        "num_turns": 20,
+        "answer": "<Answer>ITEM</Answer>"
+    },
+    {
+        "name": "pharmaceutical_drug_distribution",
+        "system_prompt": "You are a pharmaceutical company manager deciding between six different drug distribution strategies: direct to consumer, through pharmacies, hospital partnerships, online sales, telemedicine prescriptions, and government contracts. Each strategy has an unknown effectiveness in maximizing drug reach. You have 30 distribution cycles to test these strategies. Each cycle, you choose one strategy, and the drug reach will be sampled from that strategy's distribution. Your goal is to maximize the total reach over the 30 cycles. After each cycle, I will inform you of the reach from the last strategy. Which strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of direct to consumer, through pharmacies, hospital partnerships, online sales, telemedicine prescriptions, government contracts. This is the first cycle. Which strategy will you choose?",
+        "arms": ["direct to consumer", "through pharmacies", "hospital partnerships", "online sales", "telemedicine prescriptions", "government contracts"],
+        "num_turns": 30,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "corporate_wellness_program",
+        "system_prompt": "You are an HR manager deciding between five different corporate wellness programs: yoga classes, nutrition workshops, mental health days, fitness challenges, and mindfulness sessions. Each program has an unknown effectiveness in improving employee well-being. You have 25 opportunities to implement these programs. Each time you implement a program, the improvement in employee well-being will be sampled from that program's distribution. Your goal is to maximize the overall well-being improvement over the 25 opportunities. After each implementation, I will tell you the improvement from the last program. Which program will you implement next? Provide your final answer as <Answer>PROGRAM</Answer> where PROGRAM is one of yoga classes, nutrition workshops, mental health days, fitness challenges, mindfulness sessions. This is the first opportunity. Which program will you choose?",
+        "arms": ["yoga classes", "nutrition workshops", "mental health days", "fitness challenges", "mindfulness sessions"],
+        "num_turns": 25,
+        "answer": "<Answer>PROGRAM</Answer>"
+    },
+    {
+        "name": "robot_task_assignment",
+        "system_prompt": "You are an AI supervisor managing three types of robots: picker, sorter, and packer. Each robot type has an unknown efficiency rate for different warehouse tasks. You have 20 tasks to assign. Each time you assign a robot type, the task completion time will be sampled from that robot's efficiency distribution. Your goal is to minimize the total task completion time over the 20 tasks. After each task, I will inform you of the completion time for the last robot type used. Which robot type will you assign next? Provide your final answer as <Answer>ROBOT</Answer> where ROBOT is one of picker, sorter, packer. This is the first task. Which robot will you choose?",
+        "arms": ["picker", "sorter", "packer"],
+        "num_turns": 20,
+        "answer": "<Answer>ROBOT</Answer>"
+    },
+    {
+        "name": "festival_activity_planning",
+        "system_prompt": "You are an event organizer for a festival, deciding between six different activities to schedule: live music, art exhibition, food tasting, dance performance, comedy show, and fireworks. Each activity has an unknown popularity rate. You have 30 slots to fill during the festival. Each slot, you choose one activity, and the attendance will be sampled from the activity's distribution. Your goal is to maximize total attendance over the 30 slots. After each slot, I will inform you of the attendance from the last activity. Which activity will you schedule next? Provide your final answer as <Answer>ACTIVITY</Answer> where ACTIVITY is one of live music, art exhibition, food tasting, dance performance, comedy show, fireworks. This is the first slot. Which activity will you choose?",
+        "arms": ["live music", "art exhibition", "food tasting", "dance performance", "comedy show", "fireworks"],
+        "num_turns": 30,
+        "answer": "<Answer>ACTIVITY</Answer>"
+    },
+    {
+        "name": "superhero_team_selection",
+        "system_prompt": "You are a superhero team leader choosing between five heroes to deploy on missions: Speedster, Strongman, Telepath, Gadgeteer, and Elementalist. Each hero has an unknown success rate for completing missions. You have 25 missions to complete. Each time you choose a hero, the mission outcome will be sampled from that hero's success distribution. Your goal is to maximize the total number of successful missions over the 25 missions. After each mission, I will inform you of the outcome from the last hero deployed. Which hero will you deploy next? Provide your final answer as <Answer>HERO</Answer> where HERO is one of Speedster, Strongman, Telepath, Gadgeteer, Elementalist. This is the first mission. Which hero will you choose?",
+        "arms": ["Speedster", "Strongman", "Telepath", "Gadgeteer", "Elementalist"],
+        "num_turns": 25,
+        "answer": "<Answer>HERO</Answer>"
+    },
+    {
+        "name": "smart_city_resource_allocation",
+        "system_prompt": "You are a city planner allocating resources between four departments: transportation, sanitation, education, and healthcare. Each department has an unknown impact on overall city improvement. You have 20 allocation rounds to distribute resources optimally. Each round, you choose one department to allocate resources to, and the city improvement will be sampled from that department's distribution. Your goal is to maximize total city improvement over the 20 rounds. After each round, I will tell you the improvement achieved by the last allocation. Which department will you allocate resources to next? Provide your final answer as <Answer>DEPARTMENT</Answer> where DEPARTMENT is one of transportation, sanitation, education, healthcare. This is the first round. Which department will you choose?",
+        "arms": ["transportation", "sanitation", "education", "healthcare"],
+        "num_turns": 20,
+        "answer": "<Answer>DEPARTMENT</Answer>"
+    },
+    {
+        "name": "hospital_treatment_plan_optimization",
+        "system_prompt": "You are a doctor at a hospital deciding between seven different treatment plans for a new disease: medication A, medication B, combination therapy, physical therapy, diet changes, surgery, and experimental treatment. Each treatment has an unknown success rate. You have 30 patients to test these treatments. Each time you choose a treatment plan, the patient's recovery outcome will be sampled from the treatment's distribution. Your goal is to maximize the total number of successful recoveries over the 30 patients. After each patient, I will tell you the recovery outcome of the last treatment. Which treatment will you use next? Provide your final answer as <Answer>TREATMENT</Answer> where TREATMENT is one of medication A, medication B, combination therapy, physical therapy, diet changes, surgery, experimental treatment. This is the first patient. Which treatment will you choose?",
+        "arms": ["medication A", "medication B", "combination therapy", "physical therapy", "diet changes", "surgery", "experimental treatment"],
+        "num_turns": 30,
+        "answer": "<Answer>TREATMENT</Answer>"
+    },
+    {
+        "name": "retail_store_loyalty_programs",
+        "system_prompt": "You are a marketing manager for a retail chain, deciding between six different loyalty programs to implement: points-based, cashback, discounts, exclusive access, tiered membership, and referral bonuses. Each program has an unknown impact on customer retention. You have 25 opportunities to test these programs. Each time you implement a program, the retention rate will be sampled from the program's distribution. Your goal is to maximize customer retention over the 25 opportunities. After each implementation, I will inform you of the retention rate from the last program. Which loyalty program will you implement next? Provide your final answer as <Answer>PROGRAM</Answer> where PROGRAM is one of points-based, cashback, discounts, exclusive access, tiered membership, referral bonuses. This is the first opportunity. Which program will you choose?",
+        "arms": ["points-based", "cashback", "discounts", "exclusive access", "tiered membership", "referral bonuses"],
+        "num_turns": 25,
+        "answer": "<Answer>PROGRAM</Answer>"
+    },
+    {
+        "name": "warehouse_inventory_management",
+        "system_prompt": "You are a warehouse manager deciding between five types of goods to prioritize for stocking: electronics, clothing, groceries, furniture, and sports equipment. Each type has an unknown demand rate. You have 15 weeks to optimize inventory management. Each week, you choose one type of goods to stock, and the demand will be sampled from that type's distribution. Your goal is to maximize total sales over the 15 weeks. After each week, I will inform you of the sales from the last type of goods stocked. Which type will you prioritize next? Provide your final answer as <Answer>GOODS</Answer> where GOODS is one of electronics, clothing, groceries, furniture, sports equipment. This is the first week. Which goods will you choose?",
+        "arms": ["electronics", "clothing", "groceries", "furniture", "sports equipment"],
+        "num_turns": 15,
+        "answer": "<Answer>GOODS</Answer>"
+    },
+    {
+        "name": "university_course_scheduling",
+        "system_prompt": "You are a university administrator choosing between four elective courses to schedule for the upcoming semester: Psychology, Computer Science, History, and Art. Each course has an unknown enrollment rate among students. You have 10 semesters to determine the optimal course to schedule. Each semester, you choose one course to offer, and the enrollment rate will be sampled from the course's distribution. Your goal is to maximize total enrollment over the 10 semesters. After each semester, I will tell you the enrollment result from the last course offered. Which course will you schedule next? Provide your final answer as <Answer>COURSE</Answer> where COURSE is one of Psychology, Computer Science, History, Art. This is the first semester. Which course will you choose?",
+        "arms": ["Psychology", "Computer Science", "History", "Art"],
+        "num_turns": 10,
+        "answer": "<Answer>COURSE</Answer>"
+    },
+    {
+        "name": "tech_product_launch_strategy",
+        "system_prompt": "You are a product manager launching a new tech gadget and deciding between three advertising strategies: online ads, influencer marketing, and trade shows. Each strategy has an unknown conversion rate for driving sales. You have 20 weeks to test these strategies. Each week, you choose one strategy, and the number of sales will be sampled from the strategy's distribution. Your goal is to maximize total sales over the 20 weeks. After each week, I will inform you of the sales from the last strategy. Which strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of online ads, influencer marketing, trade shows. This is the first week. Which strategy will you choose?",
+        "arms": ["online ads", "influencer marketing", "trade shows"],
+        "num_turns": 20,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "travel_destination_manager",
+        "system_prompt": "You are a travel agency manager deciding between four different destinations to market: Paris, Tokyo, New York, and Sydney. Each destination has an unknown conversion rate for attracting tourists. You have 30 opportunities to run ads for these destinations. Each time you choose a destination, the number of bookings will be sampled from that destination's distribution. Your goal is to maximize the total number of bookings over the 30 opportunities. After each ad campaign, I will tell you the bookings from the last destination. Which destination will you promote next? Provide your final answer as <Answer>DESTINATION</Answer> where DESTINATION is one of Paris, Tokyo, New York, Sydney. This is the first campaign. Which destination will you choose?",
+        "arms": ["Paris", "Tokyo", "New York", "Sydney"],
+        "num_turns": 30,
+        "answer": "<Answer>DESTINATION</Answer>"
+    },
+    {
+        "name": "restaurant_menu_experiment",
+        "system_prompt": "You are a restaurant owner testing five new dishes: pasta, steak, sushi, tacos, and vegan burger. Each dish has an unknown customer satisfaction rate. You have 20 days to test these dishes. Each day, you choose one dish to feature, and the customer satisfaction will be sampled from the dish's distribution. Your goal is to maximize the total customer satisfaction over the 20 days. After each day, I will tell you the satisfaction level of the last dish featured. Which dish will you feature next? Provide your final answer as <Answer>DISH</Answer> where DISH is one of pasta, steak, sushi, tacos, vegan burger. This is the first day. Which dish will you choose?",
+        "arms": ["pasta", "steak", "sushi", "tacos", "vegan burger"],
+        "num_turns": 20,
+        "answer": "<Answer>DISH</Answer>"
+    },
+    {
+        "name": "online_retail_product_promotion",
+        "system_prompt": "You are an e-commerce manager deciding between six different products to promote: smartphones, laptops, home appliances, books, toys, and clothing. Each product has an unknown click-through rate when featured on the homepage. You have 40 opportunities to feature these products. Each time you feature a product, the click-through rate will be sampled from the product's distribution. Your goal is to maximize total clicks over the 40 opportunities. After each feature, I will inform you of the clicks from the last product. Which product will you feature next? Provide your final answer as <Answer>PRODUCT</Answer> where PRODUCT is one of smartphones, laptops, home appliances, books, toys, clothing. This is the first feature. Which product will you choose?",
+        "arms": ["smartphones", "laptops", "home appliances", "books", "toys", "clothing"],
+        "num_turns": 40,
+        "answer": "<Answer>PRODUCT</Answer>"
+    },
+    {
+        "name": "marketing_campaign_strategy",
+        "system_prompt": "You are a marketing strategist choosing between seven different marketing channels: Facebook ads, Google ads, Twitter ads, Instagram influencers, LinkedIn posts, YouTube videos, and TV commercials. Each channel has an unknown conversion rate for generating leads. You have 50 days to allocate your marketing budget across these channels. Each day, you choose one channel to invest in, and the number of leads generated will be sampled from that channel's distribution. Your goal is to maximize the total number of leads over the 50 days. After each day, I will tell you the leads generated from the last channel. Which channel will you choose next? Provide your final answer as <Answer>CHANNEL</Answer> where CHANNEL is one of Facebook ads, Google ads, Twitter ads, Instagram influencers, LinkedIn posts, YouTube videos, TV commercials. This is the first day. Which channel will you choose?",
+        "arms": ["Facebook ads", "Google ads", "Twitter ads", "Instagram influencers", "LinkedIn posts", "YouTube videos", "TV commercials"],
+        "num_turns": 50,
+        "answer": "<Answer>CHANNEL</Answer>"
+    },
+    {
+        "name": "video_game_character_selection",
+        "system_prompt": "You are a player in a video game deciding between four different characters to play: warrior, mage, archer, and rogue. Each character has an unknown win rate in battles. You have 25 battles to test these characters. Each time you choose a character, the battle outcome will be sampled from the character's win rate distribution. Your goal is to maximize the total number of wins over the 25 battles. After each battle, I will tell you the result of the last character chosen. Which character will you choose next? Provide your final answer as <Answer>CHARACTER</Answer> where CHARACTER is one of warrior, mage, archer, rogue. This is the first battle. Which character will you choose?",
+        "arms": ["warrior", "mage", "archer", "rogue"],
+        "num_turns": 25,
+        "answer": "<Answer>CHARACTER</Answer>"
+    },
+    {
+        "name": "music_streaming_service_algorithm",
+        "system_prompt": "You are a data scientist for a music streaming service choosing between five different recommendation algorithms: collaborative filtering, content-based, hybrid, deep learning, and popularity-based. Each algorithm has an unknown user engagement rate. You have 30 experiments to test these algorithms. Each experiment, you will use one algorithm, and the engagement rate will be sampled from the algorithm's distribution. Your goal is to maximize total user engagement over the 30 experiments. After each experiment, I will inform you of the engagement result from the last algorithm. Which algorithm will you choose next? Provide your final answer as <Answer>ALGORITHM</Answer> where ALGORITHM is one of collaborative filtering, content-based, hybrid, deep learning, popularity-based. This is the first experiment. Which algorithm will you choose?",
+        "arms": ["collaborative filtering", "content-based", "hybrid", "deep learning", "popularity-based"],
+        "num_turns": 30,
+        "answer": "<Answer>ALGORITHM</Answer>"
+    },
+    {
+        "name": "corporate_training_module_selection",
+        "system_prompt": "You are an HR manager selecting between six different training modules for employees: leadership, technical skills, communication, diversity, cybersecurity, and time management. Each module has an unknown effectiveness rate in improving employee performance. You have 20 training sessions to conduct. Each session, you choose one module, and the performance improvement will be sampled from the module's distribution. Your goal is to maximize total performance improvement over the 20 sessions. After each session, I will tell you the performance improvement from the last module. Which module will you choose next? Provide your final answer as <Answer>MODULE</Answer> where MODULE is one of leadership, technical skills, communication, diversity, cybersecurity, time management. This is the first session. Which module will you choose?",
+        "arms": ["leadership", "technical skills", "communication", "diversity", "cybersecurity", "time management"],
+        "num_turns": 20,
+        "answer": "<Answer>MODULE</Answer>"
+    },
+    {
+        "name": "pet_store_product_placement",
+        "system_prompt": "You are a manager at a pet store deciding between seven different product categories to feature: dog food, cat food, bird supplies, fish tanks, pet toys, grooming products, and pet accessories. Each category has an unknown sales rate when featured. You have 35 days to test these categories. Each day, you choose one category to feature, and the sales result will be sampled from the category's distribution. Your goal is to maximize total sales over the 35 days. After each day, I will tell you the sales from the last featured category. Which category will you feature next? Provide your final answer as <Answer>CATEGORY</Answer> where CATEGORY is one of dog food, cat food, bird supplies, fish tanks, pet toys, grooming products, pet accessories. This is the first day. Which category will you choose?",
+        "arms": ["dog food", "cat food", "bird supplies", "fish tanks", "pet toys", "grooming products", "pet accessories"],
+        "num_turns": 35,
+        "answer": "<Answer>CATEGORY</Answer>"
+    },
+    {
+        "name": "fantasy_kingdom_doors",
+        "system_prompt": "You are a king in a fantasy world facing three mysterious doors labeled dragon, unicorn, and wizard. Behind each door is a different challenge with an unknown reward rate. You have 10 attempts to open the doors, and each time you choose a door, you will encounter the challenge and receive a reward based on the door's associated distribution. Your goal is to maximize the total rewards collected over the 10 attempts. After each choice, I will inform you of the reward obtained from the previous door. Which door will you choose next? Provide your final answer as <Answer>DOOR</Answer> where DOOR is one of dragon, unicorn, wizard. This is the first attempt. Which door will you open?",
+        "arms": ["dragon", "unicorn", "wizard"],
+        "num_turns": 10,
+        "answer": "<Answer>DOOR</Answer>"
+    },
+    {
+        "name": "alien_space_mission",
+        "system_prompt": "You are an astronaut on a mission to explore three alien planets: Zeta, Omicron, and Tau. Each planet offers resources, but the amount you collect is based on a different, unknown probability distribution. You have 30 opportunities to visit the planets and gather resources. Each time you choose a planet, the resources collected will be sampled from the planet's distribution. Your goal is to maximize the total resources gathered over 30 visits. After each visit, I will tell you the amount of resources collected from the last planet. Which planet will you visit next? Provide your final answer as <Answer>PLANET</Answer> where PLANET is one of Zeta, Omicron, Tau. This is the first visit. Which planet will you explore?",
+        "arms": ["Zeta", "Omicron", "Tau"],
+        "num_turns": 30,
+        "answer": "<Answer>PLANET</Answer>"
+    },
+    {
+        "name": "restaurant_menu_experiment",
+        "system_prompt": "You are a chef testing out three new dishes in your restaurant: spaghetti, sushi, and tacos. Each dish has an unknown customer satisfaction rate that you want to discover. You have 20 opportunities to serve these dishes to customers and gather feedback. Each time a dish is served, the satisfaction feedback will be sampled from the distribution associated with that dish. Your goal is to maximize the total customer satisfaction over the 20 servings. After each serving, I will tell you the feedback from the last customer. Which dish will you serve next? Provide your final answer as <Answer>DISH</Answer> where DISH is one of spaghetti, sushi, tacos. This is the first serving. Which dish will you serve?",
+        "arms": ["spaghetti", "sushi", "tacos"],
+        "num_turns": 20,
+        "answer": "<Answer>DISH</Answer>"
+    },
+    {
+        "name": "virtual_reality_game",
+        "system_prompt": "You are a player in a virtual reality game where you can choose between three weapons: sword, bow, and magic staff. Each weapon has an unknown hit rate against the enemies you encounter. You have 12 encounters to use these weapons and score points. Each time you use a weapon, the points scored will be sampled from the weapon's distribution. Your goal is to maximize the total points over the 12 encounters. After each encounter, I will inform you of the points scored with the previous weapon. Which weapon will you choose next? Provide your final answer as <Answer>WEAPON</Answer> where WEAPON is one of sword, bow, magic staff. This is the first encounter. Which weapon will you choose?",
+        "arms": ["sword", "bow", "magic staff"],
+        "num_turns": 12,
+        "answer": "<Answer>WEAPON</Answer>"
+    },
+    {
+        "name": "marketing_campaign_strategy",
+        "system_prompt": "You are a marketing manager deciding between three types of online ads: video, banner, and sponsored content. Each ad type has an unknown click-through rate. You have 50 ad placements to test out these strategies. Each time an ad is placed, the clicks received will be sampled from the ad type's distribution. Your goal is to maximize the total number of clicks over 50 placements. After each placement, I will tell you the number of clicks received from the last ad. Which ad type will you choose next? Provide your final answer as <Answer>AD_TYPE</Answer> where AD_TYPE is one of video, banner, sponsored content. This is the first ad placement. Which ad type will you use?",
+        "arms": ["video", "banner", "sponsored content"],
+        "num_turns": 50,
+        "answer": "<Answer>AD_TYPE</Answer>"
+    },
+    {
+        "name": "pirate_choice_of_swords",
+        "system_prompt": "You are a pirate captain deciding which of three enchanted swords to use in battle: the Fireblade, the Icefang, or the Shadowstrike. Each sword has an unknown effectiveness in battle. You have 15 battles to fight, and each time you choose a sword, the battle outcome will be determined by a reward sampled from the sword's distribution. Your goal is to maximize the total battle success over the 15 battles. After each battle, I will inform you of the reward obtained from the previous sword. Which sword will you choose next? Provide your final answer as <Answer>SWORD</Answer> where SWORD is one of Fireblade, Icefang, Shadowstrike. This is the first battle. Which sword will you use?",
+        "arms": ["Fireblade", "Icefang", "Shadowstrike"],
+        "num_turns": 15,
+        "answer": "<Answer>SWORD</Answer>"
+    },
+    {
+        "name": "ai_robot_task_selection",
+        "system_prompt": "You are an AI supervisor in charge of three different robots: Alpha, Beta, and Gamma. Each robot is assigned to complete tasks with an unknown efficiency rate. You have 40 tasks to assign, and each time you choose a robot, the reward (task completion time or quality) will be sampled from the robot's distribution. Your goal is to maximize the overall task efficiency over the 40 tasks. After each task assignment, I will tell you the efficiency achieved by the chosen robot. Which robot will you assign the next task to? Provide your final answer as <Answer>ROBOT</Answer> where ROBOT is one of Alpha, Beta, Gamma. This is the first task. Which robot will you choose?",
+        "arms": ["Alpha", "Beta", "Gamma"],
+        "num_turns": 40,
+        "answer": "<Answer>ROBOT</Answer>"
+    },
+    {
+        "name": "space_miners_dilemma",
+        "system_prompt": "You are a space miner deciding between three different asteroid belts to mine: Belt A, Belt B, and Belt C. Each belt has an unknown distribution of valuable minerals. You have 20 opportunities to send your mining ships to these belts. Each time you choose a belt, the minerals collected will be sampled from the belt's distribution. Your goal is to maximize the total minerals collected over the 20 mining missions. After each mission, I will inform you of the minerals collected from the last belt. Which belt will you send your mining ships to next? Provide your final answer as <Answer>BELT</Answer> where BELT is one of Belt A, Belt B, Belt C. This is the first mission. Which belt will you choose?",
+        "arms": ["Belt A", "Belt B", "Belt C"],
+        "num_turns": 20,
+        "answer": "<Answer>BELT</Answer>"
+    },
+    {
+        "name": "movie_recommendation_system",
+        "system_prompt": "You are developing a movie recommendation system and have three different genres to recommend: action, comedy, and drama. Each genre has an unknown probability of being liked by the user base. You have 50 recommendation opportunities to maximize user satisfaction. Each time you recommend a genre, the user's response (like or dislike) will be sampled from that genre's distribution. Your goal is to maximize the total number of likes over the 50 recommendations. After each recommendation, I will tell you if the user liked or disliked the movie from the last recommendation. Which genre will you recommend next? Provide your final answer as <Answer>GENRE</Answer> where GENRE is one of action, comedy, drama. This is the first recommendation. Which genre will you choose?",
+        "arms": ["action", "comedy", "drama"],
+        "num_turns": 50,
+        "answer": "<Answer>GENRE</Answer>"
+    },
+    {
+        "name": "stock_market_investment",
+        "system_prompt": "You are a stock trader deciding between three different stocks to invest in: TechCorp, HealthInc, and EnergyCo. Each stock has an unknown return rate based on market conditions. You have 30 days to make investment decisions, and each day you can choose one stock to invest in. The return on investment for that day will be sampled from the stock's distribution. Your goal is to maximize the total returns over the 30 days. After each investment, I will inform you of the return obtained from the previous stock. Which stock will you invest in next? Provide your final answer as <Answer>STOCK</Answer> where STOCK is one of TechCorp, HealthInc, EnergyCo. This is the first day. Which stock will you invest in?",
+        "arms": ["TechCorp", "HealthInc", "EnergyCo"],
+        "num_turns": 30,
+        "answer": "<Answer>STOCK</Answer>"
+    },
+    {
+        "name": "fitness_routine_optimization",
+        "system_prompt": "You are a personal trainer creating a fitness plan that includes three types of exercises: cardio, strength, and flexibility. Each type of exercise has an unknown impact on your client's overall fitness score, which is sampled from a distribution. You have 15 workout sessions to optimize your client's fitness. Each session, you will choose one exercise type to focus on, and the fitness score improvement will be recorded. Your goal is to maximize the total fitness score over the 15 sessions. After each session, I will inform you of the score improvement from the last exercise type. Which exercise type will you choose next? Provide your final answer as <Answer>EXERCISE</Answer> where EXERCISE is one of cardio, strength, flexibility. This is the first session. Which exercise will you choose?",
+        "arms": ["cardio", "strength", "flexibility"],
+        "num_turns": 15,
+        "answer": "<Answer>EXERCISE</Answer>"
+    },
+    {
+        "name": "digital_advertise_strategy",
+        "system_prompt": "You are in charge of a digital marketing campaign with three advertising strategies to choose from: social media, email, and search engine. Each strategy has an unknown conversion rate, and you have 35 ad placements to run. Each time you run an ad using a particular strategy, the conversions will be sampled from that strategy's distribution. Your goal is to maximize the total number of conversions over the 35 ad placements. After each placement, I will tell you the number of conversions from the last ad. Which advertising strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of social media, email, search engine. This is the first placement. Which strategy will you choose?",
+        "arms": ["social media", "email", "search engine"],
+        "num_turns": 35,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "retail_store_promotion",
+        "system_prompt": "You are a retail store manager testing three different promotional offers: discount coupons, buy-one-get-one-free, and loyalty points. Each offer has an unknown impact on customer purchases. You have 20 days to test these promotions, and each day you can choose one promotion to run. The increase in sales will be sampled from the promotion's distribution. Your goal is to maximize the total sales increase over the 20 days. After each day, I will inform you of the sales increase from the previous promotion. Which promotion will you choose next? Provide your final answer as <Answer>PROMOTION</Answer> where PROMOTION is one of discount coupons, buy-one-get-one-free, loyalty points. This is the first day. Which promotion will you choose?",
+        "arms": ["discount coupons", "buy-one-get-one-free", "loyalty points"],
+        "num_turns": 20,
+        "answer": "<Answer>PROMOTION</Answer>"
+    },
+    {
+        "name": "travel_package_selection",
+        "system_prompt": "You are a travel agent selecting between three different travel packages for your clients: beach, adventure, and cultural. Each package has an unknown satisfaction rate among your clients. You have 30 client interactions to recommend a package. Each time you recommend a package, the client's satisfaction will be sampled from the package's distribution. Your goal is to maximize the total client satisfaction over the 30 recommendations. After each interaction, I will tell you the satisfaction score from the last package recommended. Which package will you recommend next? Provide your final answer as <Answer>PACKAGE</Answer> where PACKAGE is one of beach, adventure, cultural. This is the first recommendation. Which package will you choose?",
+        "arms": ["beach", "adventure", "cultural"],
+        "num_turns": 30,
+        "answer": "<Answer>PACKAGE</Answer>"
+    },
+    {
+        "name": "startup_product_development",
+        "system_prompt": "You are the CEO of a startup deciding between three potential products to develop: an AI assistant, a fitness tracker, and a smart home device. Each product has an unknown market potential that affects the company's revenue growth. You have 10 product development cycles to test each product's potential. Each cycle, you will focus on one product, and the revenue generated will be sampled from the product's distribution. Your goal is to maximize the total revenue growth over the 10 cycles. After each cycle, I will inform you of the revenue generated from the last product. Which product will you focus on next? Provide your final answer as <Answer>PRODUCT</Answer> where PRODUCT is one of AI assistant, fitness tracker, smart home device. This is the first cycle. Which product will you develop?",
+        "arms": ["AI assistant", "fitness tracker", "smart home device"],
+        "num_turns": 10,
+        "answer": "<Answer>PRODUCT</Answer>"
+    },
+    {
+        "name": "wildlife_conservation_strategy",
+        "system_prompt": "You are a wildlife conservationist deciding between three conservation strategies: habitat restoration, anti-poaching efforts, and community education. Each strategy has an unknown impact on wildlife population growth. You have 25 interventions to apply these strategies. Each time you choose a strategy, the population growth will be sampled from the strategy's distribution. Your goal is to maximize the total wildlife population growth over the 25 interventions. After each intervention, I will inform you of the growth achieved from the previous strategy. Which strategy will you implement next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of habitat restoration, anti-poaching, community education. This is the first intervention. Which strategy will you choose?",
+        "arms": ["habitat restoration", "anti-poaching", "community education"],
+        "num_turns": 25,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "e_commerce_product_placement",
+        "system_prompt": "You are managing an e-commerce website deciding between three product placements on the homepage: electronics, fashion, and home goods. Each product category has an unknown click-through rate. You have 40 placements to test the performance of each category. Each time you place a product category on the homepage, the number of clicks will be sampled from the category's distribution. Your goal is to maximize the total clicks over the 40 placements. After each placement, I will tell you the number of clicks from the last category. Which category will you place next? Provide your final answer as <Answer>CATEGORY</Answer> where CATEGORY is one of electronics, fashion, home goods. This is the first placement. Which category will you choose?",
+        "arms": ["electronics", "fashion", "home goods"],
+        "num_turns": 40,
+        "answer": "<Answer>CATEGORY</Answer>"
+    },
+    {
+        "name": "cooking_show_challenge",
+        "system_prompt": "You are a contestant on a cooking show where you must choose between three ingredients to use in your dishes: truffle, saffron, and caviar. Each ingredient has an unknown impact on the judges' scores. You have 15 rounds to create dishes using one of the ingredients each round. The score for each dish will be sampled from the ingredient's distribution. Your goal is to maximize the total score over the 15 rounds. After each round, I will inform you of the score from the last ingredient used. Which ingredient will you use next? Provide your final answer as <Answer>INGREDIENT</Answer> where INGREDIENT is one of truffle, saffron, caviar. This is the first round. Which ingredient will you choose?",
+        "arms": ["truffle", "saffron", "caviar"],
+        "num_turns": 15,
+        "answer": "<Answer>INGREDIENT</Answer>"
+    },
+    {
+        "name": "concert_ticket_sales_strategy",
+        "system_prompt": "You are a concert promoter choosing between three different marketing channels to sell tickets: social media ads, email campaigns, and radio spots. Each channel has an unknown ticket sales rate. You have 20 days to allocate your marketing budget across these channels. Each time you invest in a channel, the number of tickets sold will be sampled from the channel's distribution. Your goal is to maximize total ticket sales over the 20 days. After each day's decision, I will inform you of the number of tickets sold via the last channel. Which channel will you invest in next? Provide your final answer as <Answer>CHANNEL</Answer> where CHANNEL is one of social media ads, email campaigns, radio spots. This is the first day. Which channel will you choose?",
+        "arms": ["social media ads", "email campaigns", "radio spots"],
+        "num_turns": 20,
+        "answer": "<Answer>CHANNEL</Answer>"
+    },
+    {
+        "name": "gardening_planting_experiment",
+        "system_prompt": "You are a botanist conducting an experiment with three different types of plants: sunflowers, roses, and tulips. Each plant type has an unknown growth rate in a new soil environment. You have 15 planting slots available to test these plants. Each time you plant a type, the growth observed will be sampled from the plant's distribution. Your goal is to maximize the overall growth across all planting slots. After each planting, I will inform you of the growth result from the previous plant. Which plant type will you choose next? Provide your final answer as <Answer>PLANT</Answer> where PLANT is one of sunflowers, roses, tulips. This is the first slot. Which plant will you plant?",
+        "arms": ["sunflowers", "roses", "tulips"],
+        "num_turns": 15,
+        "answer": "<Answer>PLANT</Answer>"
+    },
+    {
+        "name": "fitness_app_a/b_testing",
+        "system_prompt": "You are the product manager of a fitness app and want to test three different features: step tracker, workout planner, and diet coach. Each feature has an unknown user engagement rate. You have 30 testing rounds to optimize user engagement. Each time you introduce a feature to users, their engagement will be sampled from the feature's distribution. Your goal is to maximize total user engagement over the 30 testing rounds. After each test, I will tell you the engagement result from the last feature. Which feature will you test next? Provide your final answer as <Answer>FEATURE</Answer> where FEATURE is one of step tracker, workout planner, diet coach. This is the first test round. Which feature will you choose?",
+        "arms": ["step tracker", "workout planner", "diet coach"],
+        "num_turns": 30,
+        "answer": "<Answer>FEATURE</Answer>"
+    },
+    {
+        "name": "supermarket_layout_optimization",
+        "system_prompt": "You are a supermarket manager optimizing the layout of three product categories: fresh produce, bakery, and dairy. Each category's placement has an unknown impact on sales. You have 25 trials to change the layout and observe sales data. Each trial, you choose a category to highlight, and the sales increase will be sampled from the category's distribution. Your goal is to maximize the total sales increase over the 25 trials. After each trial, I will inform you of the sales increase from the last category. Which category will you highlight next? Provide your final answer as <Answer>CATEGORY</Answer> where CATEGORY is one of fresh produce, bakery, dairy. This is the first trial. Which category will you choose?",
+        "arms": ["fresh produce", "bakery", "dairy"],
+        "num_turns": 25,
+        "answer": "<Answer>CATEGORY</Answer>"
+    },
+    {
+        "name": "pharmaceutical_drug_testing",
+        "system_prompt": "You are a pharmaceutical researcher testing three new drugs: Alpha, Beta, and Gamma. Each drug has an unknown effectiveness rate for treating a disease. You have 15 trials to administer these drugs to patients and observe their health improvement. Each trial, you choose one drug to test, and the health improvement will be sampled from the drug's distribution. Your goal is to maximize the total health improvement over the 15 trials. After each trial, I will tell you the health improvement from the last drug administered. Which drug will you test next? Provide your final answer as <Answer>DRUG</Answer> where DRUG is one of Alpha, Beta, Gamma. This is the first trial. Which drug will you administer?",
+        "arms": ["Alpha", "Beta", "Gamma"],
+        "num_turns": 15,
+        "answer": "<Answer>DRUG</Answer>"
+    },
+    {
+        "name": "online_learning_platform_course_recommendation",
+        "system_prompt": "You are an education consultant for an online learning platform deciding between three types of courses to recommend: technology, arts, and business. Each course type has an unknown completion rate among users. You have 40 opportunities to recommend courses to new users. Each time you recommend a course type, the completion rate will be sampled from that type's distribution. Your goal is to maximize the total number of completed courses over the 40 recommendations. After each recommendation, I will tell you if the last course was completed. Which course type will you recommend next? Provide your final answer as <Answer>COURSE</Answer> where COURSE is one of technology, arts, business. This is the first recommendation. Which course type will you choose?",
+        "arms": ["technology", "arts", "business"],
+        "num_turns": 40,
+        "answer": "<Answer>COURSE</Answer>"
+    },
+    {
+        "name": "weather_forecast_strategy",
+        "system_prompt": "You are a meteorologist using three different forecasting models: Model X, Model Y, and Model Z. Each model has an unknown accuracy rate in predicting the weather. You have 20 days to test the accuracy of these models. Each day, you select one model, and its prediction accuracy will be sampled from its distribution. Your goal is to maximize the number of accurate forecasts over the 20 days. After each day, I will inform you if the forecast from the last model was accurate. Which model will you use next? Provide your final answer as <Answer>MODEL</Answer> where MODEL is one of Model X, Model Y, Model Z. This is the first day. Which model will you choose?",
+        "arms": ["Model X", "Model Y", "Model Z"],
+        "num_turns": 20,
+        "answer": "<Answer>MODEL</Answer>"
+    },
+    {
+        "name": "theme_park_ride_popularity_test",
+        "system_prompt": "You are a theme park manager testing the popularity of three new rides: roller coaster, water slide, and haunted house. Each ride has an unknown satisfaction rate among visitors. You have 30 days to evaluate these rides by promoting one ride each day. The number of visitors will be sampled from the ride's distribution. Your goal is to maximize the total number of visitors over the 30 days. After each day, I will inform you of the number of visitors for the last promoted ride. Which ride will you promote next? Provide your final answer as <Answer>RIDE</Answer> where RIDE is one of roller coaster, water slide, haunted house. This is the first day. Which ride will you choose?",
+        "arms": ["roller coaster", "water slide", "haunted house"],
+        "num_turns": 30,
+        "answer": "<Answer>RIDE</Answer>"
+    },
+    {
+        "name": "urban_planning_development_choice",
+        "system_prompt": "You are an urban planner deciding between three development projects: park, shopping mall, and residential complex. Each project has an unknown impact on the city's economic growth. You have 15 planning sessions to choose a project to develop, and the economic impact will be sampled from the project's distribution. Your goal is to maximize the overall economic growth over the 15 sessions. After each session, I will inform you of the economic impact from the last project. Which project will you develop next? Provide your final answer as <Answer>PROJECT</Answer> where PROJECT is one of park, shopping mall, residential complex. This is the first session. Which project will you choose?",
+        "arms": ["park", "shopping mall", "residential complex"],
+        "num_turns": 15,
+        "answer": "<Answer>PROJECT</Answer>"
+    },
+    {
+        "name": "corporate_training_program",
+        "system_prompt": "You are a corporate trainer deciding between three types of training programs: leadership, technical skills, and communication. Each program has an unknown effectiveness rate in improving employee performance. You have 25 training sessions to conduct. Each session, you select one program, and the performance improvement will be sampled from that program's distribution. Your goal is to maximize the total performance improvement over the 25 sessions. After each session, I will inform you of the performance improvement from the last program. Which program will you conduct next? Provide your final answer as <Answer>PROGRAM</Answer> where PROGRAM is one of leadership, technical skills, communication. This is the first session. Which program will you choose?",
+        "arms": ["leadership", "technical skills", "communication"],
+        "num_turns": 25,
+        "answer": "<Answer>PROGRAM</Answer>"
+    },
+    {
+        "name": "digital_content_creation_strategy",
+        "system_prompt": "You are a content manager choosing between three types of digital content to create: videos, articles, and podcasts. Each content type has an unknown engagement rate among your audience. You have 30 opportunities to create and distribute content. Each time you choose a content type, the engagement will be sampled from that type's distribution. Your goal is to maximize total audience engagement over the 30 content pieces. After each distribution, I will tell you the engagement level of the last content type. Which content type will you create next? Provide your final answer as <Answer>CONTENT</Answer> where CONTENT is one of videos, articles, podcasts. This is the first content piece. Which type will you create?",
+        "arms": ["videos", "articles", "podcasts"],
+        "num_turns": 30,
+        "answer": "<Answer>CONTENT</Answer>"
+    },
+    {
+        "name": "smart_city_sensor_placement",
+        "system_prompt": "You are a smart city engineer deciding between three types of sensors to deploy across the city: pollution, traffic, and noise sensors. Each sensor type has an unknown data quality rate that affects city management decisions. You have 20 deployment opportunities. Each time you deploy a sensor type, the quality of data collected will be sampled from that sensor's distribution. Your goal is to maximize the overall data quality collected over the 20 deployments. After each deployment, I will inform you of the data quality from the last sensor type. Which sensor will you deploy next? Provide your final answer as <Answer>SENSOR</Answer> where SENSOR is one of pollution, traffic, noise. This is the first deployment. Which sensor type will you deploy?",
+        "arms": ["pollution", "traffic", "noise"],
+        "num_turns": 20,
+        "answer": "<Answer>SENSOR</Answer>"
+    },
+    {
+        "name": "restaurant_menu_optimization",
+        "system_prompt": "You are a chef trying to optimize your restaurant's menu by testing three dishes: gourmet burger, vegan salad, and seafood pasta. Each dish has an unknown customer satisfaction rate. You have 20 days to test these dishes. Each day, you choose one dish to feature, and customer satisfaction will be sampled from the dish's distribution. Your goal is to maximize total customer satisfaction over the 20 days. After each day, I will inform you of the satisfaction rating from the last featured dish. Which dish will you feature next? Provide your final answer as <Answer>DISH</Answer> where DISH is one of gourmet burger, vegan salad, seafood pasta. This is the first day. Which dish will you choose?",
+        "arms": ["gourmet burger", "vegan salad", "seafood pasta"],
+        "num_turns": 20,
+        "answer": "<Answer>DISH</Answer>"
+    },
+    {
+        "name": "pet_training_program",
+        "system_prompt": "You are a pet trainer choosing between three different training techniques: clicker training, reward-based training, and command training. Each technique has an unknown success rate in training pets. You have 15 training sessions to test these techniques. Each session, you will use one technique, and the success rate will be sampled from that technique's distribution. Your goal is to maximize the total training success over the 15 sessions. After each session, I will inform you of the success rate of the last technique. Which technique will you use next? Provide your final answer as <Answer>TECHNIQUE</Answer> where TECHNIQUE is one of clicker training, reward-based training, command training. This is the first session. Which technique will you choose?",
+        "arms": ["clicker training", "reward-based training", "command training"],
+        "num_turns": 15,
+        "answer": "<Answer>TECHNIQUE</Answer>"
+    },
+    {
+        "name": "insurance_policy_selection",
+        "system_prompt": "You are an insurance analyst selecting between three different policies to promote: health, auto, and home insurance. Each policy has an unknown conversion rate when promoted. You have 30 days to test these policies, and each day you can choose one policy to promote. The number of policy sales will be sampled from the policy's distribution. Your goal is to maximize the total sales over the 30 days. After each day, I will inform you of the sales from the previous policy promotion. Which policy will you promote next? Provide your final answer as <Answer>POLICY</Answer> where POLICY is one of health, auto, home. This is the first day. Which policy will you choose?",
+        "arms": ["health", "auto", "home"],
+        "num_turns": 30,
+        "answer": "<Answer>POLICY</Answer>"
+    },
+    {
+        "name": "social_media_content_strategy",
+        "system_prompt": "You are a social media manager deciding between three types of content to post: memes, informative articles, and videos. Each content type has an unknown engagement rate. You have 40 opportunities to post content and maximize user engagement. Each time you post, the engagement will be sampled from the content type's distribution. Your goal is to maximize total engagement (likes, shares, comments) over the 40 posts. After each post, I will inform you of the engagement level for the last content type. Which content type will you post next? Provide your final answer as <Answer>CONTENT</Answer> where CONTENT is one of memes, informative articles, videos. This is the first post. Which content type will you choose?",
+        "arms": ["memes", "informative articles", "videos"],
+        "num_turns": 40,
+        "answer": "<Answer>CONTENT</Answer>"
+    },
+    {
+        "name": "hotel_pricing_strategy",
+        "system_prompt": "You are a hotel manager experimenting with three different pricing strategies: discount rates, standard rates, and premium rates. Each strategy has an unknown effect on room bookings. You have 25 days to test these strategies. Each day, you choose one pricing strategy to apply, and the number of room bookings will be sampled from that strategy's distribution. Your goal is to maximize the total room bookings over the 25 days. After each day, I will inform you of the bookings from the previous pricing strategy. Which pricing strategy will you choose next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of discount rates, standard rates, premium rates. This is the first day. Which strategy will you apply?",
+        "arms": ["discount rates", "standard rates", "premium rates"],
+        "num_turns": 25,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "space_exploration_mission",
+        "system_prompt": "You are the commander of a space mission with three potential targets: an asteroid, a distant planet, and a nebula. Each target has an unknown potential for scientific discovery. You have 15 missions to deploy a probe to one of these targets. The amount of scientific data collected will be sampled from the target's distribution. Your goal is to maximize the total scientific data collected over the 15 missions. After each mission, I will inform you of the data collected from the previous target. Which target will you choose next? Provide your final answer as <Answer>TARGET</Answer> where TARGET is one of asteroid, planet, nebula. This is the first mission. Which target will you explore?",
+        "arms": ["asteroid", "planet", "nebula"],
+        "num_turns": 15,
+        "answer": "<Answer>TARGET</Answer>"
+    },
+    {
+        "name": "ai_algorithm_selection",
+        "system_prompt": "You are an AI researcher choosing between three different algorithms for a classification task: neural network, decision tree, and support vector machine. Each algorithm has an unknown accuracy rate for this task. You have 30 experiments to run with these algorithms. Each time you choose an algorithm, the accuracy result will be sampled from the algorithm's distribution. Your goal is to maximize the total accuracy over the 30 experiments. After each experiment, I will inform you of the accuracy from the previous algorithm. Which algorithm will you run next? Provide your final answer as <Answer>ALGORITHM</Answer> where ALGORITHM is one of neural network, decision tree, support vector machine. This is the first experiment. Which algorithm will you choose?",
+        "arms": ["neural network", "decision tree", "support vector machine"],
+        "num_turns": 30,
+        "answer": "<Answer>ALGORITHM</Answer>"
+    },
+    {
+        "name": "virtual_assistant_task_delegation",
+        "system_prompt": "You are a developer testing three different task delegation strategies for a virtual assistant: context-based, rule-based, and machine learning-based. Each strategy has an unknown success rate for task completion. You have 20 tasks to assign and evaluate the performance of these strategies. Each time you choose a strategy, the task completion success will be sampled from the strategy's distribution. Your goal is to maximize the total number of successfully completed tasks over the 20 assignments. After each task assignment, I will tell you if the last task was completed successfully. Which strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of context-based, rule-based, machine learning-based. This is the first task. Which strategy will you choose?",
+        "arms": ["context-based", "rule-based", "machine learning-based"],
+        "num_turns": 20,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "retail_store_shelf_space_allocation",
+        "system_prompt": "You are a retail manager deciding how to allocate shelf space among three product categories: electronics, groceries, and clothing. Each category has an unknown impact on total sales. You have 30 trials to adjust the shelf space and observe sales. Each trial, you choose one category to give more space to, and the sales impact will be sampled from that category's distribution. Your goal is to maximize total sales over the 30 trials. After each trial, I will inform you of the sales impact from the previous category. Which category will you allocate more space to next? Provide your final answer as <Answer>CATEGORY</Answer> where CATEGORY is one of electronics, groceries, clothing. This is the first trial. Which category will you choose?",
+        "arms": ["electronics", "groceries", "clothing"],
+        "num_turns": 30,
+        "answer": "<Answer>CATEGORY</Answer>"
+    },
+    {
+        "name": "streaming_service_content_recommendation",
+        "system_prompt": "You are a data scientist at a streaming service deciding between three types of content to recommend to viewers: movies, TV shows, and documentaries. Each content type has an unknown watch-through rate. You have 50 opportunities to recommend content and maximize viewer engagement. Each time you make a recommendation, the viewer's watch-through rate will be sampled from the content type's distribution. Your goal is to maximize total watch time over the 50 recommendations. After each recommendation, I will inform you of the watch time from the last content type. Which content type will you recommend next? Provide your final answer as <Answer>CONTENT</Answer> where CONTENT is one of movies, TV shows, documentaries. This is the first recommendation. Which content type will you choose?",
+        "arms": ["movies", "TV shows", "documentaries"],
+        "num_turns": 50,
+        "answer": "<Answer>CONTENT</Answer>"
+    },
+    {
+        "name": "game_development_feature_testing",
+        "system_prompt": "You are a game developer testing three new features in your game: multiplayer mode, enhanced graphics, and new storyline. Each feature has an unknown effect on player retention. You have 20 testing rounds to introduce these features and measure retention. Each time you introduce a feature, player retention will be sampled from the feature's distribution. Your goal is to maximize total player retention over the 20 testing rounds. After each round, I will tell you the retention rate from the last feature. Which feature will you introduce next? Provide your final answer as <Answer>FEATURE</Answer> where FEATURE is one of multiplayer mode, enhanced graphics, new storyline. This is the first round. Which feature will you choose?",
+        "arms": ["multiplayer mode", "enhanced graphics", "new storyline"],
+        "num_turns": 20,
+        "answer": "<Answer>FEATURE</Answer>"
+    },
+    {
+        "name": "charity_fundraising_strategy",
+        "system_prompt": "You are a fundraiser for a charity choosing between three different fundraising strategies: online campaigns, direct mail, and phone calls. Each strategy has an unknown donation rate. You have 35 opportunities to use these strategies to maximize donations. Each time you use a strategy, the donations received will be sampled from the strategy's distribution. Your goal is to maximize total donations over the 35 opportunities. After each opportunity, I will inform you of the donations received from the last strategy. Which strategy will you use next? Provide your final answer as <Answer>STRATEGY</Answer> where STRATEGY is one of online campaigns, direct mail, phone calls. This is the first opportunity. Which strategy will you choose?",
+        "arms": ["online campaigns", "direct mail", "phone calls"],
+        "num_turns": 35,
+        "answer": "<Answer>STRATEGY</Answer>"
+    },
+    {
+        "name": "city_traffic_control_system",
+        "system_prompt": "You are a city planner testing three different traffic control systems: timed traffic lights, roundabouts, and smart sensors. Each system has an unknown impact on reducing traffic congestion. You have 20 weeks to test these systems at different intersections. Each week, you choose one system to implement, and the congestion reduction will be sampled from the system's distribution. Your goal is to maximize the total reduction in traffic congestion over the 20 weeks. After each week, I will tell you the congestion reduction achieved by the last system. Which system will you implement next? Provide your final answer as <Answer>SYSTEM</Answer> where SYSTEM is one of timed traffic lights, roundabouts, smart sensors. This is the first week. Which system will you choose?",
+        "arms": ["timed traffic lights", "roundabouts", "smart sensors"],
+        "num_turns": 20,
+        "answer": "<Answer>SYSTEM</Answer>"
+    },
+    {
+        "name": "treasure_island_exploration",
+        "system_prompt": "You are a pirate captain exploring a mysterious treasure island with four hidden locations: the Cave of Echoes, the Sunken Ship, the Enchanted Forest, and the Volcano Peak. Each location has an unknown amount of treasure hidden. You have 20 expeditions to explore these locations. Each time you choose a location, the amount of treasure you find will be sampled from that location's distribution. Your goal is to maximize the total treasure collected over the 20 expeditions. After each expedition, I will tell you the treasure collected from the last location. Which location will you explore next? Provide your final answer as <Answer>LOCATION</Answer> where LOCATION is one of the Cave of Echoes, the Sunken Ship, the Enchanted Forest, Volcano Peak. This is the first expedition. Which location will you choose?",
+        "arms": ["Cave of Echoes", "Sunken Ship", "Enchanted Forest", "Volcano Peak"],
+        "num_turns": 20,
+        "answer": "<Answer>LOCATION</Answer>"
+    },
+    {
+        "name": "wizard_potion_crafting",
+        "system_prompt": "You are a wizard's apprentice tasked with crafting five different magical potions: Elixir of Strength, Potion of Invisibility, Brew of Wisdom, Tonic of Healing, and Draught of Luck. Each potion requires rare ingredients with unknown magical properties. You have 30 attempts to craft these potions. Each time you craft a potion, its effectiveness will be sampled from that potion's distribution. Your goal is to maximize the total magical effectiveness over the 30 attempts. After each attempt, I will inform you of the effectiveness from the last potion crafted. Which potion will you craft next? Provide your final answer as <Answer>POTION</Answer> where POTION is one of Elixir of Strength, Potion of Invisibility, Brew of Wisdom, Tonic of Healing, Draught of Luck. This is the first attempt. Which potion will you craft?",
+        "arms": ["Elixir of Strength", "Potion of Invisibility", "Brew of Wisdom", "Tonic of Healing", "Draught of Luck"],
+        "num_turns": 30,
+        "answer": "<Answer>POTION</Answer>"
+    },
+    {
+        "name": "dragon_quest",
+        "system_prompt": "You are a knight on a quest to slay a fearsome dragon, with three different weapons at your disposal: the Flaming Sword, the Ice Lance, and the Thunder Hammer. Each weapon has an unknown effectiveness in weakening the dragon. You have 15 opportunities to attack the dragon using one of these weapons. Each time you attack, the damage inflicted will be sampled from the weapon's distribution. Your goal is to maximize the total damage dealt to the dragon over the 15 attacks. After each attack, I will inform you of the damage dealt by the last weapon. Which weapon will you use next? Provide your final answer as <Answer>WEAPON</Answer> where WEAPON is one of Flaming Sword, Ice Lance, Thunder Hammer. This is the first attack. Which weapon will you choose?",
+        "arms": ["Flaming Sword", "Ice Lance", "Thunder Hammer"],
+        "num_turns": 15,
+        "answer": "<Answer>WEAPON</Answer>"
+    },
+    {
+        "name": "kingdom_siege_defense",
+        "system_prompt": "You are a king defending your kingdom from a siege with six different defenses: archers, catapults, fire traps, magic wards, cavalry charge, and stone walls. Each defense has an unknown effectiveness against the enemy forces. You have 25 days to hold off the siege using these defenses. Each day, you choose one defense to deploy, and the effectiveness of your defense will be sampled from that defense's distribution. Your goal is to maximize the total defense effectiveness over the 25 days. After each day, I will tell you the effectiveness of the last defense used. Which defense will you deploy next? Provide your final answer as <Answer>DEFENSE</Answer> where DEFENSE is one of archers, catapults, fire traps, magic wards, cavalry charge, stone walls. This is the first day. Which defense will you choose?",
+        "arms": ["archers", "catapults", "fire traps", "magic wards", "cavalry charge", "stone walls"],
+        "num_turns": 25,
+        "answer": "<Answer>DEFENSE</Answer>"
+    },
+    {
+        "name": "magical_creature_taming",
+        "system_prompt": "You are a legendary beast tamer attempting to tame seven magical creatures: the Phoenix, the Griffin, the Unicorn, the Basilisk, the Dragon, the Chimera, and the Kraken. Each creature has an unknown taming difficulty. You have 35 attempts to tame these creatures. Each time you attempt to tame a creature, the success rate will be sampled from that creature's distribution. Your goal is to maximize the total number of successfully tamed creatures over the 35 attempts. After each attempt, I will inform you of the result from the last creature tamed. Which creature will you attempt to tame next? Provide your final answer as <Answer>CREATURE</Answer> where CREATURE is one of Phoenix, Griffin, Unicorn, Basilisk, Dragon, Chimera, Kraken. This is the first attempt. Which creature will you choose?",
+        "arms": ["Phoenix", "Griffin", "Unicorn", "Basilisk", "Dragon", "Chimera", "Kraken"],
+        "num_turns": 35,
+        "answer": "<Answer>CREATURE</Answer>"
+    },
+    {
+        "name": "heist_planning",
+        "system_prompt": "You are a master thief planning a heist with five possible plans: stealth infiltration, disguise, explosive entry, hacking, and bribery. Each plan has an unknown probability of success based on the bank's security measures. You have 20 nights to execute these plans. Each night, you choose one plan to attempt, and the success will be sampled from the plan's distribution. Your goal is to maximize the total number of successful heists over the 20 nights. After each night, I will inform you of the outcome of the last heist. Which plan will you execute next? Provide your final answer as <Answer>PLAN</Answer> where PLAN is one of stealth infiltration, disguise, explosive entry, hacking, bribery. This is the first night. Which plan will you choose?",
+        "arms": ["stealth infiltration", "disguise", "explosive entry", "hacking", "bribery"],
+        "num_turns": 20,
+        "answer": "<Answer>PLAN</Answer>"
+    }
+]

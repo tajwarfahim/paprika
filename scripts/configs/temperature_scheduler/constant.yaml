@@ -1,0 +1,6 @@
+temperature_scheduler_class: ConstTemperatureScheduler
+name: const_temperature
+
+kwargs:
+  temp: 0.0
+  num_total_steps: ???

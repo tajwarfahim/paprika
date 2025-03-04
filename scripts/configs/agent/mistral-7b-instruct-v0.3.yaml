@@ -1,0 +1,20 @@
+model_name: mistralai/Mistral-7B-Instruct-v0.3
+model_type: huggingface_models
+base_model_name: mistralai/Mistral-7B-Instruct-v0.3
+
+# Context length, should not handle longer contexts correctly
+model_max_length: 2048
+
+# only used for making savefile directory
+model_name_summary: Mistral-7B-Instruct-v0.3/Mistral-7B-Instruct-v0.3
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: mistralai/Mistral-7B-Instruct-v0.3
+
+# used for saving files
+save_file_name: Mistral-7B-Instruct-v0.3
+
+finetuned_tokenizer: False
+
+# use flash attention, only false for gemma among the models we have
+use_flash_attention: True

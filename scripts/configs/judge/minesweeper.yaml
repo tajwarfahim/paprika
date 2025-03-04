@@ -1,0 +1,18 @@
+model_name: minesweeper_judge
+model_type: minesweeper_judge_inference_engine
+mode: judge
+base_model_name: null
+
+# No use for gpt models
+model_max_length: 131072
+
+# only used for making savefile directory
+model_name_summary: null
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: null
+
+# used for saving files
+save_file_name: null
+
+finetuned_tokenizer: null

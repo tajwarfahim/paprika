@@ -1,0 +1,7 @@
+temperature_scheduler_class: LinearTemperatureScheduler
+name: linear_temperature_annealing
+
+kwargs:
+  init_temp: 1.0
+  final_temp: 0.0
+  num_total_steps: ???

@@ -1,0 +1,20 @@
+model_name: google/gemma-2-9b-it
+model_type: huggingface_models
+base_model_name: google/gemma-2-9b-it
+
+# Context length, should not handle longer contexts correctly
+model_max_length: 8192
+
+# only used for making savefile directory
+model_name_summary: gemma-2-9b-it/gemma-2-9b-it
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: google/gemma-2-9b-it
+
+# used for saving files
+save_file_name: gemma-2-9b-it
+
+finetuned_tokenizer: False
+
+# use flash attention, only false for gemma among the models we have
+use_flash_attention: False

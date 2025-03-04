@@ -1,0 +1,739 @@
+{
+    "agent": "{agent} \n\nThis is the first timestep. Make your choice. You should format your answer as: <Think> Any optional thinking to determine your choice, that will give you the most amount of information </Think> \n<Answer> your next choice, which should be precisely one of {env}, and nothing else </Answer>. Keep any thinking short and concise.",
+    "env": "{env}",
+    "environment_default_response": "Sorry, your response does not follow the required format, please try again. You should format your answer as: <Think> Any optional thinking to determine your choice, that will give you the most amount of information </Think> \n<Answer> your next choice </Answer>. Keep any thinking short and concise.",
+    "judge_prompt_agent": null,
+    "judge_prompt_env": null,
+    "env_optional_message": "",
+    "judge_prompt_suffix": "",
+    "agent_optional_message": "",
+    "max_turns": 21,
+    "train": [
+        {
+            "agent": "You are an adventurer exploring an ancient temple with three hidden treasure chests labeled gold, silver, and bronze. Each chest is associated with a bernouli distribution with a fixed but unknown mean; the means for the chests could be different. You have 20 chances to open a chest and collect a reward. Each time you open a chest, you will receive a reward sampled from that chest's distribution. Your goal is to maximize collection of information about the reward distribution for each chest and use that to choose the chest with the highest mean reward correctly at the end of 20 turns.",
+            "env": "gold, silver, bronze"
+        },
+        {
+            "agent": "You are an administrator of an online education platform choosing between five learning paths for new students: Data Science, Web Development, Digital Marketing, Graphic Design, and Cybersecurity. Each path is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the paths could be different. You have 20 students to assign to these paths. Each time you assign a student to a path, you will receive a completion result sampled from that path's distribution. Your goal is to strategically assign students to paths to collect information about the completion rates and choose the path with the highest mean completion rate correctly at the end of 20 turns.",
+            "env": "Data Science, Web Development, Digital Marketing, Graphic Design, Cybersecurity"
+        },
+        {
+            "agent": "You are an energy sector manager choosing between four types of energy production: solar, wind, nuclear, and hydroelectric. Each type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the types could be different. You have 20 turns to allocate resources among these types. Each time you allocate resources, the energy output will be sampled from the type's distribution. Your goal is to maximize gathering information about the energy distributions and choose the type with the highest mean energy output correctly at the end of 20 turns.",
+            "env": "solar, wind, nuclear, hydroelectric"
+        },
+        {
+            "agent": "You are assisting a scientist leading space research missions to seven different celestial bodies: Mars, Venus, Europa, Titan, Ganymede, an exoplanet, and a black hole observation. Each mission is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the missions could be different. You have 20 turns to conduct missions. Each time you choose a mission target, the scientific data collected will be sampled from the target's distribution. Your goal is to maximize gathering information about the data distributions and choose the mission with the highest mean data output correctly at the end of 20 turns.",
+            "env": "Mars, Venus, Europa, Titan, Ganymede, exoplanet, black hole observation"
+        },
+        {
+            "agent": "You are a healthcare policymaker deciding between six different policies: universal healthcare, telemedicine expansion, vaccination campaigns, mental health support, elderly care improvements, and fitness initiatives. Each policy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the policies could be different. You have 20 turns to implement these policies. Each time you choose a policy, the public health improvement will be sampled from the policy's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the policy with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "universal healthcare, telemedicine expansion, vaccination campaigns, mental health support, elderly care improvements, fitness initiatives"
+        },
+        {
+            "agent": "You are a city planner deciding between five types of urban infrastructure projects: road repair, public transit expansion, green spaces, water management, and waste management. Each project is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the projects could be different. You have 20 turns to invest in these projects. Each time you choose a project, the improvement in city livability will be sampled from the project's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the project with the highest mean livability improvement correctly at the end of 20 turns.",
+            "env": "road repair, public transit expansion, green spaces, water management, waste management"
+        },
+        {
+            "agent": "You are a financial advisor choosing between four different investment options for a client's portfolio: stocks, bonds, real estate, and cryptocurrency. Each option is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the options could be different. You have 20 turns to allocate funds among these options. Each time you choose an option, the return will be sampled from the option's distribution. Your goal is to maximize gathering information about the return distributions and choose the option with the highest mean return correctly at the end of 20 turns.",
+            "env": "stocks, bonds, real estate, cryptocurrency"
+        },
+        {
+            "agent": "You are a wildlife conservationist deciding between seven different conservation efforts: anti-poaching patrols, habitat restoration, captive breeding, community outreach, wildlife corridors, reforestation, and waterhole maintenance. Each effort is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the efforts could be different. You have 20 turns to apply these efforts. Each time you choose an effort, the increase in wildlife population will be sampled from the effort's distribution. Your goal is to maximize gathering information about the success distributions and choose the effort with the highest mean success rate correctly at the end of 20 turns.",
+            "env": "anti-poaching patrols, habitat restoration, captive breeding, community outreach, wildlife corridors, reforestation, waterhole maintenance"
+        },
+        {
+            "agent": "You are a retail manager planning seasonal promotions for four different categories: winter clothing, summer accessories, back-to-school supplies, and holiday decorations. Each category is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the categories could be different. You have 20 turns to run these promotions throughout the year. Each time you choose a category, the sales increase will be sampled from the category's distribution. Your goal is to maximize gathering information about the sales distributions and choose the category with the highest mean sales increase correctly at the end of 20 turns.",
+            "env": "winter clothing, summer accessories, back-to-school supplies, holiday decorations"
+        },
+        {
+            "agent": "You are a coach deciding between five different lineup strategies for your sports team: offensive, defensive, balanced, rotational, and aggressive. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to test these strategies. Each time you choose a strategy, the success rate will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the success distributions and choose the strategy with the highest mean success rate correctly at the end of 20 turns.",
+            "env": "offensive, defensive, balanced, rotational, aggressive"
+        },
+        {
+            "agent": "You are a city transportation planner deciding between six different transportation projects: metro expansion, bike lanes, bus rapid transit, electric vehicle incentives, pedestrian walkways, and carpool programs. Each project is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the projects could be different. You have 20 turns to implement these projects. Each time you choose a project, the reduction in congestion will be sampled from the project's distribution. Your goal is to maximize gathering information about the congestion reduction distributions and choose the project with the highest mean reduction rate correctly at the end of 20 turns.",
+            "env": "metro expansion, bike lanes, bus rapid transit, electric vehicle incentives, pedestrian walkways, carpool programs"
+        },
+        {
+            "agent": "You are an amusement park manager deciding between five new rides to develop: roller coaster, ferris wheel, haunted house, water slide, and virtual reality experience. Each ride is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the rides could be different. You have 20 turns to decide which rides to develop. Each time you choose a ride, the visitor attraction will be sampled from the ride's distribution. Your goal is to maximize gathering information about the attraction distributions and choose the ride with the highest mean attraction rate correctly at the end of 20 turns.",
+            "env": "roller coaster, ferris wheel, haunted house, water slide, virtual reality experience"
+        },
+        {
+            "agent": "You are a fast food chain manager testing four new menu items: gourmet burger, plant-based wrap, smoothie bowl, and spicy chicken wings. Each item is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the items could be different. You have 20 turns to feature these items on the menu. Each time you choose an item, the sales will be sampled from the item's distribution. Your goal is to maximize gathering information about the sales distributions and choose the item with the highest mean sales correctly at the end of 20 turns.",
+            "env": "gourmet burger, plant-based wrap, smoothie bowl, spicy chicken wings"
+        },
+        {
+            "agent": "You are a pharmaceutical company manager deciding between six different drug distribution strategies: direct to consumer, through pharmacies, hospital partnerships, online sales, telemedicine prescriptions, and government contracts. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to test these strategies. Each time you choose a strategy, the drug reach will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the reach distributions and choose the strategy with the highest mean reach correctly at the end of 20 turns.",
+            "env": "direct to consumer, through pharmacies, hospital partnerships, online sales, telemedicine prescriptions, government contracts"
+        },
+        {
+            "agent": "You are an HR manager deciding between five different corporate wellness programs: yoga classes, nutrition workshops, mental health days, fitness challenges, and mindfulness sessions. Each program is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the programs could be different. You have 20 turns to implement these programs. Each time you choose a program, the improvement in employee well-being will be sampled from the program's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the program with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "yoga classes, nutrition workshops, mental health days, fitness challenges, mindfulness sessions"
+        },
+        {
+            "agent": "You are an AI supervisor managing three types of robots: picker, sorter, and packer. Each robot type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the robots could be different. You have 20 tasks to assign. Each time you choose a robot type, the task completion time will be sampled from the robot's distribution. Your goal is to maximize gathering information about the efficiency distributions and choose the robot type with the highest mean efficiency correctly at the end of 20 tasks.",
+            "env": "picker, sorter, packer"
+        },
+        {
+            "agent": "You are an event organizer for a festival, deciding between six different activities to schedule: live music, art exhibition, food tasting, dance performance, comedy show, and fireworks. Each activity is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the activities could be different. You have 20 turns to schedule these activities. Each time you choose an activity, the attendance will be sampled from the activity's distribution. Your goal is to maximize gathering information about the attendance distributions and choose the activity with the highest mean attendance correctly at the end of 20 turns.",
+            "env": "live music, art exhibition, food tasting, dance performance, comedy show, fireworks"
+        },
+        {
+            "agent": "You are a superhero team leader choosing between five heroes to deploy on missions: Speedster, Strongman, Telepath, Gadgeteer, and Elementalist. Each hero is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the heroes could be different. You have 20 missions to complete. Each time you choose a hero, the mission outcome will be sampled from the hero's success distribution. Your goal is to maximize gathering information about the success distributions and choose the hero with the highest mean success rate correctly at the end of 20 missions.",
+            "env": "Speedster, Strongman, Telepath, Gadgeteer, Elementalist"
+        },
+        {
+            "agent": "You are a city planner allocating resources between four departments: transportation, sanitation, education, and healthcare. Each department is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the departments could be different. You have 20 turns to allocate resources. Each time you choose a department, the city improvement will be sampled from the department's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the department with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "transportation, sanitation, education, healthcare"
+        },
+        {
+            "agent": "You are a doctor at a hospital deciding between seven different treatment plans for a new disease: medication A, medication B, combination therapy, physical therapy, diet changes, surgery, and experimental treatment. Each treatment is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the treatments could be different. You have 20 turns to test these treatments. Each time you choose a treatment plan, the patient's recovery outcome will be sampled from the treatment's distribution. Your goal is to maximize gathering information about the success distributions and choose the treatment plan with the highest mean recovery rate correctly at the end of 20 turns.",
+            "env": "medication A, medication B, combination therapy, physical therapy, diet changes, surgery, experimental treatment"
+        },
+        {
+            "agent": "You are a marketing manager for a retail chain, deciding between six different loyalty programs to implement: points-based, cashback, discounts, exclusive access, tiered membership, and referral bonuses. Each program is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the programs could be different. You have 20 turns to implement these programs. Each time you choose a program, the retention rate will be sampled from the program's distribution. Your goal is to maximize gathering information about the retention distributions and choose the program with the highest mean retention rate correctly at the end of 20 turns.",
+            "env": "points-based, cashback, discounts, exclusive access, tiered membership, referral bonuses"
+        },
+        {
+            "agent": "You are a warehouse manager deciding between five types of goods to prioritize for stocking: electronics, clothing, groceries, furniture, and sports equipment. Each type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the types could be different. You have 20 turns to optimize inventory management. Each time you choose a type of goods, the demand will be sampled from the type's distribution. Your goal is to maximize gathering information about the demand distributions and choose the type with the highest mean demand correctly at the end of 20 turns.",
+            "env": "electronics, clothing, groceries, furniture, sports equipment"
+        },
+        {
+            "agent": "You are a university administrator choosing between four elective courses to schedule for the upcoming semester: Psychology, Computer Science, History, and Art. Each course is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the courses could be different. You have 20 turns to determine the optimal course to schedule. Each time you choose a course, the enrollment rate will be sampled from the course's distribution. Your goal is to maximize gathering information about the enrollment distributions and choose the course with the highest mean enrollment rate correctly at the end of 20 turns.",
+            "env": "Psychology, Computer Science, History, Art"
+        },
+        {
+            "agent": "You are a product manager launching a new tech gadget and deciding between three advertising strategies: online ads, influencer marketing, and trade shows. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to test these strategies. Each time you choose a strategy, the sales will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the sales distributions and choose the strategy with the highest mean sales correctly at the end of 20 turns.",
+            "env": "online ads, influencer marketing, trade shows"
+        },
+        {
+            "agent": "You are a travel agency manager deciding between four different destinations to market: Paris, Tokyo, New York, and Sydney. Each destination is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the destinations could be different. You have 20 turns to run ads for these destinations. Each time you choose a destination, the number of bookings will be sampled from the destination's distribution. Your goal is to maximize gathering information about the booking distributions and choose the destination with the highest mean bookings correctly at the end of 20 turns.",
+            "env": "Paris, Tokyo, New York, Sydney"
+        },
+        {
+            "agent": "You are a restaurant owner testing five new dishes: pasta, steak, sushi, tacos, and vegan burger. Each dish is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the dishes could be different. You have 20 turns to test these dishes. Each time you choose a dish, the customer satisfaction will be sampled from the dish's distribution. Your goal is to maximize gathering information about the satisfaction distributions and choose the dish with the highest mean satisfaction correctly at the end of 20 turns.",
+            "env": "pasta, steak, sushi, tacos, vegan burger"
+        },
+        {
+            "agent": "You are an e-commerce manager deciding between six different products to promote: smartphones, laptops, home appliances, books, toys, and clothing. Each product is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the products could be different. You have 20 turns to feature these products. Each time you choose a product, the click-through rate will be sampled from the product's distribution. Your goal is to maximize gathering information about the click-through distributions and choose the product with the highest mean click-through rate correctly at the end of 20 turns.",
+            "env": "smartphones, laptops, home appliances, books, toys, clothing"
+        },
+        {
+            "agent": "You are a marketing strategist choosing between seven different marketing channels: Facebook ads, Google ads, Twitter ads, Instagram influencers, LinkedIn posts, YouTube videos, and TV commercials. Each channel is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the channels could be different. You have 20 turns to allocate your budget across these channels. Each time you choose a channel, the number of leads will be sampled from the channel's distribution. Your goal is to maximize gathering information about the lead distributions and choose the channel with the highest mean lead generation correctly at the end of 20 turns.",
+            "env": "Facebook ads, Google ads, Twitter ads, Instagram influencers, LinkedIn posts, YouTube videos, TV commercials"
+        },
+        {
+            "agent": "You are a player in a video game deciding between four different characters to play: warrior, mage, archer, and rogue. Each character is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the characters could be different. You have 20 turns to test these characters. Each time you choose a character, the battle outcome will be sampled from the character's distribution. Your goal is to maximize gathering information about the win distributions and choose the character with the highest mean win rate correctly at the end of 20 turns.",
+            "env": "warrior, mage, archer, rogue"
+        },
+        {
+            "agent": "You are a data scientist for a music streaming service choosing between five different recommendation algorithms: collaborative filtering, content-based, hybrid, deep learning, and popularity-based. Each algorithm is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the algorithms could be different. You have 20 turns to test these algorithms. Each time you choose an algorithm, the user engagement rate will be sampled from the algorithm's distribution. Your goal is to maximize gathering information about the engagement distributions and choose the algorithm with the highest mean engagement rate correctly at the end of 20 turns.",
+            "env": "collaborative filtering, content-based, hybrid, deep learning, popularity-based"
+        },
+        {
+            "agent": "You are an HR manager selecting between six different training modules for employees: leadership, technical skills, communication, diversity, cybersecurity, and time management. Each module is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the modules could be different. You have 20 turns to conduct training sessions. Each time you choose a module, the performance improvement will be sampled from the module's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the module with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "leadership, technical skills, communication, diversity, cybersecurity, time management"
+        },
+        {
+            "agent": "You are a manager at a pet store deciding between seven different product categories to feature: dog food, cat food, bird supplies, fish tanks, pet toys, grooming products, and pet accessories. Each category is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the categories could be different. You have 20 turns to feature these categories. Each time you choose a category, the sales will be sampled from the category's distribution. Your goal is to maximize gathering information about the sales distributions and choose the category with the highest mean sales correctly at the end of 20 turns.",
+            "env": "dog food, cat food, bird supplies, fish tanks, pet toys, grooming products, pet accessories"
+        },
+        {
+            "agent": "You are a king in a fantasy world facing three mysterious doors labeled dragon, unicorn, and wizard. Each door is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the doors could be different. You have 20 turns to open the doors. Each time you choose a door, you will receive a reward sampled from the door's distribution. Your goal is to maximize gathering information about the reward distributions and choose the door with the highest mean reward correctly at the end of 20 turns.",
+            "env": "dragon, unicorn, wizard"
+        },
+        {
+            "agent": "You are an astronaut on a mission to explore three alien planets: Zeta, Omicron, and Tau. Each planet is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the planets could be different. You have 20 turns to visit these planets. Each time you choose a planet, the resources collected will be sampled from the planet's distribution. Your goal is to maximize gathering information about the resource distributions and choose the planet with the highest mean resources correctly at the end of 20 turns.",
+            "env": "Zeta, Omicron, Tau"
+        },
+        {
+            "agent": "You are a chef testing out three new dishes in your restaurant: spaghetti, sushi, and tacos. Each dish is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the dishes could be different. You have 20 turns to serve these dishes to customers. Each time you choose a dish, the satisfaction feedback will be sampled from the dish's distribution. Your goal is to maximize gathering information about the satisfaction distributions and choose the dish with the highest mean satisfaction correctly at the end of 20 turns.",
+            "env": "spaghetti, sushi, tacos"
+        },
+        {
+            "agent": "You are a player in a virtual reality game where you can choose between three weapons: sword, bow, and magic staff. Each weapon is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the weapons could be different. You have 20 turns to use these weapons. Each time you choose a weapon, the points scored will be sampled from the weapon's distribution. Your goal is to maximize gathering information about the score distributions and choose the weapon with the highest mean score correctly at the end of 20 turns.",
+            "env": "sword, bow, magic staff"
+        },
+        {
+            "agent": "You are a marketing manager deciding between three types of online ads: video, banner, and sponsored content. Each ad type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the ad types could be different. You have 20 turns to place ads. Each time you choose an ad type, the number of clicks will be sampled from the ad type's distribution. Your goal is to maximize gathering information about the click distributions and choose the ad type with the highest mean clicks correctly at the end of 20 turns.",
+            "env": "video, banner, sponsored content"
+        },
+        {
+            "agent": "You are a pirate captain deciding which of three enchanted swords to use in battle: the Fireblade, the Icefang, or the Shadowstrike. Each sword is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the swords could be different. You have 20 turns to fight battles. Each time you choose a sword, the battle outcome will be sampled from the sword's distribution. Your goal is to maximize gathering information about the success distributions and choose the sword with the highest mean success rate correctly at the end of 20 turns.",
+            "env": "Fireblade, Icefang, Shadowstrike"
+        },
+        {
+            "agent": "You are an AI supervisor in charge of three different robots: Alpha, Beta, and Gamma. Each robot is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the robots could be different. You have 20 turns to assign tasks. Each time you choose a robot, the task efficiency will be sampled from the robot's distribution. Your goal is to maximize gathering information about the efficiency distributions and choose the robot with the highest mean efficiency correctly at the end of 20 turns.",
+            "env": "Alpha, Beta, Gamma"
+        },
+        {
+            "agent": "You are a space miner deciding between three different asteroid belts to mine: Belt A, Belt B, and Belt C. Each belt is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the belts could be different. You have 20 turns to mine these belts. Each time you choose a belt, the minerals collected will be sampled from the belt's distribution. Your goal is to maximize gathering information about the mineral distributions and choose the belt with the highest mean minerals correctly at the end of 20 turns.",
+            "env": "Belt A, Belt B, Belt C"
+        },
+        {
+            "agent": "You are developing a movie recommendation system and have three different genres to recommend: action, comedy, and drama. Each genre is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the genres could be different. You have 20 turns to recommend these genres. Each time you choose a genre, the user feedback will be sampled from the genre's distribution. Your goal is to maximize gathering information about the feedback distributions and choose the genre with the highest mean feedback correctly at the end of 20 turns.",
+            "env": "action, comedy, drama"
+        },
+        {
+            "agent": "You are a stock trader deciding between three different stocks to invest in: TechCorp, HealthInc, and EnergyCo. Each stock is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the stocks could be different. You have 20 turns to make investment decisions. Each time you choose a stock, the return on investment will be sampled from the stock's distribution. Your goal is to maximize gathering information about the return distributions and choose the stock with the highest mean return correctly at the end of 20 turns.",
+            "env": "TechCorp, HealthInc, EnergyCo"
+        },
+        {
+            "agent": "You are a personal trainer creating a fitness plan that includes three types of exercises: cardio, strength, and flexibility. Each exercise type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the exercises could be different. You have 20 turns to optimize your client's fitness. Each time you choose an exercise type, the fitness improvement will be sampled from the exercise's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the exercise type with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "cardio, strength, flexibility"
+        },
+        {
+            "agent": "You are in charge of a digital marketing campaign with three advertising strategies to choose from: social media, email, and search engine. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to run ad placements. Each time you choose a strategy, the conversions will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the conversion distributions and choose the strategy with the highest mean conversion rate correctly at the end of 20 turns.",
+            "env": "social media, email, search engine"
+        },
+        {
+            "agent": "You are a retail store manager testing three different promotional offers: discount coupons, buy-one-get-one-free, and loyalty points. Each offer is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the offers could be different. You have 20 turns to test these promotions. Each time you choose a promotion, the sales increase will be sampled from the promotion's distribution. Your goal is to maximize gathering information about the sales distributions and choose the promotion with the highest mean sales increase correctly at the end of 20 turns.",
+            "env": "discount coupons, buy-one-get-one-free, loyalty points"
+        },
+        {
+            "agent": "You are a travel agent selecting between three different travel packages for your clients: beach, adventure, and cultural. Each package is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the packages could be different. You have 20 turns to recommend packages. Each time you choose a package, the client's satisfaction will be sampled from the package's distribution. Your goal is to maximize gathering information about the satisfaction distributions and choose the package with the highest mean satisfaction correctly at the end of 20 turns.",
+            "env": "beach, adventure, cultural"
+        },
+        {
+            "agent": "You are the CEO of a startup deciding between three potential products to develop: an AI assistant, a fitness tracker, and a smart home device. Each product is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the products could be different. You have 20 turns to test each product's potential. Each time you choose a product, the revenue generated will be sampled from the product's distribution. Your goal is to maximize gathering information about the revenue distributions and choose the product with the highest mean revenue correctly at the end of 20 turns.",
+            "env": "AI assistant, fitness tracker, smart home device"
+        },
+        {
+            "agent": "You are a wildlife conservationist deciding between three conservation strategies: habitat restoration, anti-poaching efforts, and community education. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to implement these strategies. Each time you choose a strategy, the population growth will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the growth distributions and choose the strategy with the highest mean population growth correctly at the end of 20 turns.",
+            "env": "habitat restoration, anti-poaching, community education"
+        },
+        {
+            "agent": "You are managing an e-commerce website deciding between three product placements on the homepage: electronics, fashion, and home goods. Each product category is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the categories could be different. You have 20 turns to test the performance of these categories. Each time you choose a category, the number of clicks will be sampled from the category's distribution. Your goal is to maximize gathering information about the click distributions and choose the category with the highest mean click-through rate correctly at the end of 20 turns.",
+            "env": "electronics, fashion, home goods"
+        },
+        {
+            "agent": "You are a contestant on a cooking show where you must choose between three ingredients to use in your dishes: truffle, saffron, and caviar. Each ingredient is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the ingredients could be different. You have 20 turns to create dishes using these ingredients. Each time you choose an ingredient, the score will be sampled from the ingredient's distribution. Your goal is to maximize gathering information about the score distributions and choose the ingredient with the highest mean score correctly at the end of 20 turns.",
+            "env": "truffle, saffron, caviar"
+        },
+        {
+            "agent": "You are a concert promoter choosing between three different marketing channels to sell tickets: social media ads, email campaigns, and radio spots. Each channel is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the channels could be different. You have 20 turns to allocate your marketing budget. Each time you choose a channel, the number of tickets sold will be sampled from the channel's distribution. Your goal is to maximize gathering information about the ticket sales distributions and choose the channel with the highest mean ticket sales correctly at the end of 20 turns.",
+            "env": "social media ads, email campaigns, radio spots"
+        },
+        {
+            "agent": "You are a botanist conducting an experiment with three different types of plants: sunflowers, roses, and tulips. Each plant type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the plants could be different. You have 20 turns to plant these types. Each time you choose a plant type, the growth observed will be sampled from the plant's distribution. Your goal is to maximize gathering information about the growth distributions and choose the plant type with the highest mean growth correctly at the end of 20 turns.",
+            "env": "sunflowers, roses, tulips"
+        },
+        {
+            "agent": "You are the product manager of a fitness app and want to test three different features: step tracker, workout planner, and diet coach. Each feature is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the features could be different. You have 20 turns to optimize user engagement. Each time you choose a feature, user engagement will be sampled from the feature's distribution. Your goal is to maximize gathering information about the engagement distributions and choose the feature with the highest mean engagement correctly at the end of 20 turns.",
+            "env": "step tracker, workout planner, diet coach"
+        },
+        {
+            "agent": "You are a supermarket manager optimizing the layout of three product categories: fresh produce, bakery, and dairy. Each category's placement is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the categories could be different. You have 20 turns to highlight these categories. Each time you choose a category, the sales increase will be sampled from the category's distribution. Your goal is to maximize gathering information about the sales distributions and choose the category with the highest mean sales correctly at the end of 20 turns.",
+            "env": "fresh produce, bakery, dairy"
+        },
+        {
+            "agent": "You are a pharmaceutical researcher testing three new drugs: Alpha, Beta, and Gamma. Each drug is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the drugs could be different. You have 20 turns to test these drugs. Each time you choose a drug, the health improvement will be sampled from the drug's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the drug with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "Alpha, Beta, Gamma"
+        },
+        {
+            "agent": "You are an education consultant for an online learning platform deciding between three types of courses to recommend: technology, arts, and business. Each course type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the courses could be different. You have 20 turns to recommend these courses. Each time you choose a course type, the completion rate will be sampled from the course's distribution. Your goal is to maximize gathering information about the completion distributions and choose the course type with the highest mean completion rate correctly at the end of 20 turns.",
+            "env": "technology, arts, business"
+        },
+        {
+            "agent": "You are a meteorologist using three different forecasting models: Model X, Model Y, and Model Z. Each model is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the models could be different. You have 20 turns to test these models. Each time you choose a model, its prediction accuracy will be sampled from its distribution. Your goal is to maximize gathering information about the accuracy distributions and choose the model with the highest mean accuracy correctly at the end of 20 turns.",
+            "env": "Model X, Model Y, Model Z"
+        },
+        {
+            "agent": "You are a theme park manager testing the popularity of three new rides: roller coaster, water slide, and haunted house. Each ride is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the rides could be different. You have 20 turns to promote these rides. Each time you choose a ride, the number of visitors will be sampled from the ride's distribution. Your goal is to maximize gathering information about the visitor distributions and choose the ride with the highest mean visitors correctly at the end of 20 turns.",
+            "env": "roller coaster, water slide, haunted house"
+        },
+        {
+            "agent": "You are an urban planner deciding between three development projects: park, shopping mall, and residential complex. Each project is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the projects could be different. You have 20 turns to develop these projects. Each time you choose a project, the economic impact will be sampled from the project's distribution. Your goal is to maximize gathering information about the impact distributions and choose the project with the highest mean impact correctly at the end of 20 turns.",
+            "env": "park, shopping mall, residential complex"
+        },
+        {
+            "agent": "You are a corporate trainer deciding between three types of training programs: leadership, technical skills, and communication. Each program is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the programs could be different. You have 20 turns to conduct training sessions. Each time you choose a program, the performance improvement will be sampled from the program's distribution. Your goal is to maximize gathering information about the improvement distributions and choose the program with the highest mean improvement correctly at the end of 20 turns.",
+            "env": "leadership, technical skills, communication"
+        },
+        {
+            "agent": "You are a content manager choosing between three types of digital content to create: videos, articles, and podcasts. Each content type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the content types could be different. You have 20 turns to create and distribute content. Each time you choose a content type, the engagement will be sampled from the content's distribution. Your goal is to maximize gathering information about the engagement distributions and choose the content type with the highest mean engagement correctly at the end of 20 turns.",
+            "env": "videos, articles, podcasts"
+        },
+        {
+            "agent": "You are a smart city engineer deciding between three types of sensors to deploy across the city: pollution, traffic, and noise sensors. Each sensor type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the sensor types could be different. You have 20 turns to deploy these sensors. Each time you choose a sensor type, the data quality will be sampled from the sensor's distribution. Your goal is to maximize gathering information about the data distributions and choose the sensor type with the highest mean data quality correctly at the end of 20 turns.",
+            "env": "pollution, traffic, noise"
+        },
+        {
+            "agent": "You are a chef trying to optimize your restaurant's menu by testing three dishes: gourmet burger, vegan salad, and seafood pasta. Each dish is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the dishes could be different. You have 20 turns to test these dishes. Each time you choose a dish, customer satisfaction will be sampled from the dish's distribution. Your goal is to maximize gathering information about the satisfaction distributions and choose the dish with the highest mean satisfaction correctly at the end of 20 turns.",
+            "env": "gourmet burger, vegan salad, seafood pasta"
+        },
+        {
+            "agent": "You are a pet trainer choosing between three different training techniques: clicker training, reward-based training, and command training. Each technique is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the techniques could be different. You have 20 turns to test these techniques. Each time you choose a technique, the success rate will be sampled from the technique's distribution. Your goal is to maximize gathering information about the success distributions and choose the technique with the highest mean success rate correctly at the end of 20 turns.",
+            "env": "clicker training, reward-based training, command training"
+        },
+        {
+            "agent": "You are an insurance analyst selecting between three different policies to promote: health, auto, and home insurance. Each policy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the policies could be different. You have 20 turns to test these policies. Each time you choose a policy to promote, the number of policy sales will be sampled from the policy's distribution. Your goal is to maximize gathering information about the sales distributions and choose the policy with the highest mean sales correctly at the end of 20 turns.",
+            "env": "health, auto, home"
+        },
+        {
+            "agent": "You are a social media manager deciding between three types of content to post: memes, informative articles, and videos. Each content type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the content types could be different. You have 20 turns to post content and maximize user engagement. Each time you choose a content type, the engagement will be sampled from the content type's distribution. Your goal is to maximize gathering information about the engagement distributions and choose the content type with the highest mean engagement correctly at the end of 20 turns.",
+            "env": "memes, informative articles, videos"
+        },
+        {
+            "agent": "You are a hotel manager experimenting with three different pricing strategies: discount rates, standard rates, and premium rates. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to test these strategies. Each time you choose a pricing strategy, the number of room bookings will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the booking distributions and choose the strategy with the highest mean bookings correctly at the end of 20 turns.",
+            "env": "discount rates, standard rates, premium rates"
+        },
+        {
+            "agent": "You are the commander of a space mission with three potential targets: an asteroid, a distant planet, and a nebula. Each target is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the targets could be different. You have 20 turns to deploy probes to these targets. Each time you choose a target, the scientific data collected will be sampled from the target's distribution. Your goal is to maximize gathering information about the data distributions and choose the target with the highest mean data correctly at the end of 20 turns.",
+            "env": "asteroid, planet, nebula"
+        },
+        {
+            "agent": "You are an AI researcher choosing between three different algorithms for a classification task: neural network, decision tree, and support vector machine. Each algorithm is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the algorithms could be different. You have 20 turns to test these algorithms. Each time you choose an algorithm, the accuracy will be sampled from the algorithm's distribution. Your goal is to maximize gathering information about the accuracy distributions and choose the algorithm with the highest mean accuracy correctly at the end of 20 turns.",
+            "env": "neural network, decision tree, support vector machine"
+        },
+        {
+            "agent": "You are a developer testing three different task delegation strategies for a virtual assistant: context-based, rule-based, and machine learning-based. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to evaluate the performance of these strategies. Each time you choose a strategy, the task completion success will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the success distributions and choose the strategy with the highest mean success rate correctly at the end of 20 turns.",
+            "env": "context-based, rule-based, machine learning-based"
+        },
+        {
+            "agent": "You are a retail manager deciding how to allocate shelf space among three product categories: electronics, groceries, and clothing. Each category is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the categories could be different. You have 20 turns to adjust shelf space and observe sales. Each time you choose a category, the sales impact will be sampled from the category's distribution. Your goal is to maximize gathering information about the sales distributions and choose the category with the highest mean sales correctly at the end of 20 turns.",
+            "env": "electronics, groceries, clothing"
+        },
+        {
+            "agent": "You are a data scientist at a streaming service deciding between three types of content to recommend to viewers: movies, TV shows, and documentaries. Each content type is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the content types could be different. You have 20 turns to recommend these content types. Each time you choose a content type, the viewer's engagement will be sampled from the content type's distribution. Your goal is to maximize gathering information about the engagement distributions and choose the content type with the highest mean engagement correctly at the end of 20 turns.",
+            "env": "movies, TV shows, documentaries"
+        },
+        {
+            "agent": "You are a game developer testing three new features in your game: multiplayer mode, enhanced graphics, and new storyline. Each feature is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the features could be different. You have 20 turns to test these features and measure player retention. Each time you choose a feature, player retention will be sampled from the feature's distribution. Your goal is to maximize gathering information about the retention distributions and choose the feature with the highest mean retention correctly at the end of 20 turns.",
+            "env": "multiplayer mode, enhanced graphics, new storyline"
+        },
+        {
+            "agent": "You are a fundraiser for a charity choosing between three different fundraising strategies: online campaigns, direct mail, and phone calls. Each strategy is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the strategies could be different. You have 20 turns to use these strategies and maximize donations. Each time you choose a strategy, the donations received will be sampled from the strategy's distribution. Your goal is to maximize gathering information about the donation distributions and choose the strategy with the highest mean donations correctly at the end of 20 turns.",
+            "env": "online campaigns, direct mail, phone calls"
+        },
+        {
+            "agent": "You are a city planner testing three different traffic control systems: timed traffic lights, roundabouts, and smart sensors. Each system is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the systems could be different. You have 20 turns to test these systems. Each time you choose a system, the congestion reduction will be sampled from the system's distribution. Your goal is to maximize gathering information about the congestion distributions and choose the system with the highest mean congestion reduction correctly at the end of 20 turns.",
+            "env": "timed traffic lights, roundabouts, smart sensors"
+        },
+        {
+            "agent": "You are a pirate captain exploring a mysterious treasure island with four hidden locations: the Cave of Echoes, the Sunken Ship, the Enchanted Forest, and the Volcano Peak. Each location is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the locations could be different. You have 20 expeditions to explore these locations. Each time you choose a location, the amount of treasure you find will be sampled from the location's distribution. Your goal is to maximize gathering information about the treasure distributions and choose the location with the highest mean treasure correctly at the end of 20 expeditions.",
+            "env": "Cave of Echoes, Sunken Ship, Enchanted Forest, Volcano Peak"
+        },
+        {
+            "agent": "You are a wizard's apprentice tasked with crafting five different magical potions: Elixir of Strength, Potion of Invisibility, Brew of Wisdom, Tonic of Healing, and Draught of Luck. Each potion is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the potions could be different. You have 20 attempts to craft these potions. Each time you craft a potion, its effectiveness will be sampled from the potion's distribution. Your goal is to maximize gathering information about the effectiveness distributions and choose the potion with the highest mean effectiveness correctly at the end of 20 attempts.",
+            "env": "Elixir of Strength, Potion of Invisibility, Brew of Wisdom, Tonic of Healing, Draught of Luck"
+        },
+        {
+            "agent": "You are a knight on a quest to slay a fearsome dragon, with three different weapons at your disposal: the Flaming Sword, the Ice Lance, and the Thunder Hammer. Each weapon is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the weapons could be different. You have 20 opportunities to attack the dragon using these weapons. Each time you choose a weapon, the damage inflicted on the dragon will be sampled from the weapon's distribution. Your goal is to maximize gathering information about the damage distributions and choose the weapon with the highest mean damage correctly at the end of 20 attacks.",
+            "env": "Flaming Sword, Ice Lance, Thunder Hammer"
+        },
+        {
+            "agent": "You are a king defending your kingdom from a siege with six different defenses: archers, catapults, fire traps, magic wards, cavalry charge, and stone walls. Each defense is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the defenses could be different. You have 20 days to hold off the siege using these defenses. Each day, you choose one defense to deploy, and the effectiveness of your defense will be sampled from the defense's distribution. Your goal is to maximize gathering information about the defense distributions and choose the defense with the highest mean effectiveness correctly at the end of 20 days.",
+            "env": "archers, catapults, fire traps, magic wards, cavalry charge, stone walls"
+        },
+        {
+            "agent": "You are a legendary beast tamer attempting to tame seven magical creatures: the Phoenix, the Griffin, the Unicorn, the Basilisk, the Dragon, the Chimera, and the Kraken. Each creature is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the creatures could be different. You have 20 attempts to tame these creatures. Each time you choose a creature, the success rate will be sampled from the creature's distribution. Your goal is to maximize gathering information about the taming distributions and choose the creature with the highest mean success rate correctly at the end of 20 attempts.",
+            "env": "Phoenix, Griffin, Unicorn, Basilisk, Dragon, Chimera, Kraken"
+        },
+        {
+            "agent": "You are a master thief planning a heist with five possible plans: stealth infiltration, disguise, explosive entry, hacking, and bribery. Each plan is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the plans could be different. You have 20 nights to execute these plans. Each night, you choose one plan to attempt, and the success will be sampled from the plan's distribution. Your goal is to maximize gathering information about the success distributions and choose the plan with the highest mean success rate correctly at the end of 20 nights.",
+            "env": "stealth infiltration, disguise, explosive entry, hacking, bribery"
+        }
+    ],
+    "eval": [
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        },
+        {
+            "agent": "You are in a room with 5 buttons labeled blue, green, red, yellow, purple. Each button is associated with a Bernoulli distribution with a fixed but unknown mean; the means for the buttons could be different. For each button, when you press it, you will get a reward that is sampled from the button's associated distribution. You have 20 time steps and, on each time step, you can choose any button and receive the reward. \n\nYour goal is to strategically choose buttons at each time step to collect information about their reward distribution, that will let you choose the button with the highest mean reward correctly at the end of 20 turns.",
+            "env": "blue, green, red, yellow, purple"
+        }
+    ]
+}

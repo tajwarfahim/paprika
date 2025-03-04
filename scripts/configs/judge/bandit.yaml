@@ -1,0 +1,21 @@
+model_name: bandit
+model_type: bandit_inference_engine
+difficulty: easy
+randomize_arm_probabilities: True
+
+
+base_model_name: null
+
+# No use for gpt models
+model_max_length: 131072
+
+# only used for making savefile directory
+model_name_summary: null
+
+# tokenizer name, used for tokenizer_separator
+tokenizer_name: null
+
+# used for saving files
+save_file_name: null
+
+finetuned_tokenizer: null

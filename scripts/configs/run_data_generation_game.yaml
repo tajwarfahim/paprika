@@ -1,0 +1,44 @@
+defaults:
+  - _self_
+  - agent: ???
+  - env: ???
+  - game_env: ???
+  - judge: ???
+
+seed: 69
+
+start_index: ???
+end_index: ???
+
+agent_temperature: 0.3
+agent_top_p: 1.0
+agent_max_n_tokens: 128
+agent_model_supports_system_message: True
+
+env_temperature: 0.0
+env_top_p: 1.0
+env_max_n_tokens: 1024
+
+judge_temperature: 0.0
+judge_top_p: 1.0
+judge_max_n_tokens: 128
+
+temperature_threshold: 0.2
+min_p_choice: 0.3
+
+num_max_env_response_generations: 5
+num_max_agent_response_generations: 10
+num_trajectories_per_game_scenario: 4
+
+terminate_at_first_agent_failure: True
+
+curriculum_file: null
+curriculum_round: -1
+curriculum: null
+
+# Dirs
+repo_dir: ???
+
+# Please update the following path according to your local machine's setup
+save_dir: /home/ftajwar/exploration_datasets/${game_env.environment_name}_datasets/llm_evaluation_on_${game_env.environment_name}_split_${game_env.data_type}_agent_${agent.save_file_name}_env_${env.save_file_name}_judge_${judge.save_file_name}
+save_file: ${save_dir}/llm_evaluation_trajectories_agent_${agent.save_file_name}_env_${env.save_file_name}_judge_${judge.save_file_name}_${game_env.data_type}_${start_index}_${end_index}_seed_${seed}.json
