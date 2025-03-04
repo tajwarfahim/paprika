@@ -23,7 +23,7 @@ If you use this repo in your research, please consider citing our paper:
 
 In order for the installations to go smoothly, make sure you are operating from a GPU machine, typically one compatible with flash attention. It is ideal if you use the same GPU machines that you would use to run your experiments. 
 
-Please create a new conda environment with the correct dependencies (these may differ based on your compute resources, please update the packages accordingly). Make sure you are in the correct directory (one that contains ``llm_exploration'', ``notebooks'' and ``scripts'' sub-directories), and then run the following commands:
+Please create a new conda environment with the correct dependencies (these may differ based on your compute resources, please update the packages accordingly). Make sure you are in the correct directory (one that contains llm_exploration, notebooks and scripts sub-directories), and then run the following commands:
 
 ```
 conda env create -f environment.yaml
@@ -34,7 +34,7 @@ pip install -e .
 
 ## Running experiments
 
-First, make sure you are in the "scripts/bash_scripts" directory. Next, put the OPENAI API key and Hugging Face authentication token as ENV variables. One can put these keys in the ``bashrc'' file for simplicity, or put them in individual bash scripts.
+First, make sure you are in the "scripts/bash_scripts" directory. Next, put the OPENAI API key and Hugging Face authentication token as ENV variables. One can put these keys in the bashrc file for simplicity, or put them in individual bash scripts.
 
 ```
 # Put your openai API key here
@@ -51,12 +51,12 @@ export HF_TOKEN="<HUGGINGFACE_AUTHENTICATION_TOKEN>"
 bash run_evaluation.sh
 ```
 
-Please change the parameters within ``run_evaluation.sh'' if you want to change the task group, or the exact set of tasks you want to run evaluations on.
+Please change the parameters within "run_evaluation.sh" if you want to change the task group, or the exact set of tasks you want to run evaluations on.
 
 
 **Run Supervised Finetuning**
 
-Our supervised finetuning dataset can be found in this [link](https://huggingface.co/datasets/ftajwar/paprika_SFT_dataset). Please download the dataset, and update the local paths within the bash script ``run_supervised_finetuning.sh'', and then run it. Our default code uses 8 L40S GPUs and 400GB of memory, but adjust the script accordingly if you have a different amount of resources.
+Our supervised finetuning dataset can be found in this [link](https://huggingface.co/datasets/ftajwar/paprika_SFT_dataset). Please download the dataset, and update the local paths within the bash script "run_supervised_finetuning.sh", and then run it. Our default code uses 8 L40S GPUs and 400GB of memory, but adjust the script accordingly if you have a different amount of resources.
 
 ```
 bash run_supervised_finetuning.sh
@@ -72,7 +72,7 @@ In order to precompute and store reference model's log probs, use the following 
 bash precompute_log_probs.sh
 ```
 
-This would store the tokenized trajectories (preferred and dispreferred), labels (with user/environment tokens masked out) and reference log probabilites into a ``.pt'' file specified via the config or command line arguments.
+This would store the tokenized trajectories (preferred and dispreferred), labels (with user/environment tokens masked out) and reference log probabilites into a ".pt" file specified via the config or command line arguments.
 
 **Run Preference Finetuning**
 
@@ -84,7 +84,7 @@ bash run_preference_finetuning.sh
 
 ## Other Details
 
-Our codebase is nicely modularized. Please see ``llm_exploration/game/game_configs'' for all the prompts and individual tasks for each task group, ``llm_exploration/game/game.py'' for our implementation of multi-turn interactions between an agent and a task environment (plus optionally a task judge), ``llm_exploration/inference'' for how the logic of all task groups and inference using LLMs are implemented, and ``llm_exploration/llm_finetuning'' for our implementation of multi-turn SFT and DPO optimization routines. It is easy to add another training algorithm/task group by simply adding the desired files in these directories. For 
+Our codebase is nicely modularized. Please see "llm_exploration/game/game_configs" for all the prompts and individual tasks for each task group, "llm_exploration/game/game.py" for our implementation of multi-turn interactions between an agent and a task environment (plus optionally a task judge), "llm_exploration/inference" for how the logic of all task groups and inference using LLMs are implemented, and "llm_exploration/llm_finetuning" for our implementation of multi-turn SFT and DPO optimization routines. It is easy to add another training algorithm/task group by simply adding the desired files in these directories. For 
 
 ## Acknowledgements
 
