@@ -84,7 +84,7 @@ bash run_preference_finetuning.sh
 
 ## Other Details
 
-Our codebase is nicely modularized. Please see "llm_exploration/game/game_configs" for all the prompts and individual tasks for each task group, "llm_exploration/game/game.py" for our implementation of multi-turn interactions between an agent and a task environment (plus optionally a task judge), "llm_exploration/inference" for how the logic of all task groups and inference using LLMs are implemented, and "llm_exploration/llm_finetuning" for our implementation of multi-turn SFT and DPO optimization routines. It is easy to add another training algorithm/task group by simply adding the desired files in these directories. For 
+Please see "llm_exploration/game/game_configs" for all the prompts and individual tasks for each task group, "llm_exploration/game/game.py" for our implementation of multi-turn interactions between an agent and a task environment (plus optionally a task judge), "llm_exploration/inference" for how the logic of all task groups and inference using LLMs are implemented, and "llm_exploration/llm_finetuning" for our implementation of multi-turn SFT and DPO optimization routines. It is easy to add another training algorithm/task group by simply adding the desired files in these directories.
 
 ## Acknowledgements
 
