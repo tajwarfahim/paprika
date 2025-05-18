@@ -26,7 +26,7 @@ In order for the installations to go smoothly, make sure you are operating from 
 Please create a new conda environment with the correct dependencies (these may differ based on your compute resources, please update the packages accordingly). Make sure you are in the correct directory (one that contains llm_exploration, notebooks and scripts sub-directories), and then run the following commands:
 
 ```
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate paprika
 pip install flash-attn --no-build-isolation
 pip install -e .
